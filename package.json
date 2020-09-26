@@ -1,0 +1,41 @@
+{
+  "name": "tmlanguage-task-juggler",
+  "version": "0.0.1",
+  "description": "Text Mate language syntax rules for TaskJuggler 3",
+  "main": "build/build.js",
+  "scripts": {
+    "build": "npm run build:grammar && npm run build:tests",
+    "build:grammar": "tsc -b build -v && node build/build.js",
+    "build:tests": "tsc -b tests -v",
+    "test": "mocha --full-trace tests/test.js  --reporter mocha-multi-reporters",
+    "diff": "cross-env-shell $DIFF tests/baselines tests/generated",
+    "accept": "copyfiles -u 2 \"tests/generated/*\" tests/baselines"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callpraths/tmlanguage-task-juggler.git"
+  },
+  "author": "Prathmesh Prabhu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/callpraths/tmlanguage-task-juggler/issues"
+  },
+  "homepage": "https://github.com/callpraths/tmlanguage-task-juggler#readme",
+  "dependencies": {
+    "@types/chai": "latest",
+    "@types/js-yaml": "latest",
+    "@types/mocha": "latest",
+    "@types/node": "latest",
+    "chai": "latest",
+    "js-yaml": "latest",
+    "mocha": "latest",
+    "plist": "latest",
+    "typescript": "latest",
+    "vscode-textmate": "4.1.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.3.0",
+    "cross-env": "^5.1.1",
+    "mocha-multi-reporters": "^1.1.7"
+  }
+}

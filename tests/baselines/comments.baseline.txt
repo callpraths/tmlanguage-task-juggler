@@ -1,0 +1,10 @@
+original file
+-----------------------------------
+// This is a single line comment.
+-----------------------------------
+
+Grammar: syntax.tmLanguage
+-----------------------------------
+>// This is a single line comment.
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3

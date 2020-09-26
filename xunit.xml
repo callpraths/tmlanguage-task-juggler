@@ -1,0 +1,27 @@
+<testsuite name="Mocha Tests" tests="1" failures="0" errors="1" skipped="0" timestamp="Mon, 28 Sep 2020 01:11:01 GMT" time="0.018">
+<testcase classname="Generating baseline for comments.tjp3" name="Comparing baseline" time="0.003"><failure>Expected baselines to match: comments.baseline.txt: expected &#x27;original file\n-----------------------------------\n// This is a single line comment.\n-----------------------------------\n\nGrammar: syntax.tmLanguage\n-----------------------------------\n&#x3E;// This is a single line comment.\n ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n source.tjp3&#x27; to equal &#x27;original file\n-----------------------------------\n// This is a single line comment.\n-----------------------------------\n\nGrammar: syntax.tmLanguage\n-----------------------------------\n&#x3E;// This is a single line comment.\n ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n source.tjp3 INCORRECT_SCOPE_EXTENSION&#x27;
+
+      + expected - actual
+
+       Grammar: syntax.tmLanguage
+       -----------------------------------
+       &#x3E;// This is a single line comment.
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      - source.tjp3
+      + source.tjp3 INCORRECT_SCOPE_EXTENSION
+      
+AssertionError: Expected baselines to match: comments.baseline.txt: expected &#x27;original file\n-----------------------------------\n// This is a single line comment.\n-----------------------------------\n\nGrammar: syntax.tmLanguage\n-----------------------------------\n&#x3E;// This is a single line comment.\n ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n source.tjp3&#x27; to equal &#x27;original file\n-----------------------------------\n// This is a single line comment.\n-----------------------------------\n\nGrammar: syntax.tmLanguage\n-----------------------------------\n&#x3E;// This is a single line comment.\n ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n source.tjp3 INCORRECT_SCOPE_EXTENSION&#x27;
+    at assertBaselinesMatch (/home/callpraths_gmail_com/repos/tmlanguage-task-juggler/tests/test.js:53:21)
+    at Context.&#x3C;anonymous&#x3E; (/home/callpraths_gmail_com/repos/tmlanguage-task-juggler/tests/test.js:29:13)
+    at callFn (/home/callpraths_gmail_com/repos/tmlanguage-task-juggler/node_modules/mocha/lib/runnable.js:358:21)
+    at Test.Runnable.run (/home/callpraths_gmail_com/repos/tmlanguage-task-juggler/node_modules/mocha/lib/runnable.js:346:5)
+    at Runner.runTest (/home/callpraths_gmail_com/repos/tmlanguage-task-juggler/node_modules/mocha/lib/runner.js:621:10)
+    at /home/callpraths_gmail_com/repos/tmlanguage-task-juggler/node_modules/mocha/lib/runner.js:745:12
+    at next (/home/callpraths_gmail_com/repos/tmlanguage-task-juggler/node_modules/mocha/lib/runner.js:538:14)
+    at /home/callpraths_gmail_com/repos/tmlanguage-task-juggler/node_modules/mocha/lib/runner.js:548:7
+    at next (/home/callpraths_gmail_com/repos/tmlanguage-task-juggler/node_modules/mocha/lib/runner.js:430:14)
+    at Immediate._onImmediate (/home/callpraths_gmail_com/repos/tmlanguage-task-juggler/node_modules/mocha/lib/runner.js:516:5)
+    at runCallback (timers.js:705:18)
+    at tryOnImmediate (timers.js:676:5)
+    at processImmediate (timers.js:658:5)</failure></testcase>
+</testsuite>

@@ -23,3 +23,25 @@ The grammar is being developed to be used for Syntax highlighting in [Visual Stu
 [Parser rules]: https://github.com/taskjuggler/TaskJuggler/blob/master/lib/taskjuggler/TjpSyntaxRules.rb
 [Syntax reference]: https://taskjuggler.org/tj3/manual/Getting_Started.html#Structure_of_a_TJP_File
 [tjp-vim-syntax]: https://taskjuggler.org/tj3/manual/Installation.html#Installing_the_Vim_Support
+
+## Install dependencies
+``` sh
+npm install
+```
+
+## Build
+
+Compile the yaml file into the tmLanguage and tmTheme files
+
+``` sh
+npm run build:grammar
+```
+
+## Tests
+
+``` sh
+npm test            # Compiles & runs tests
+
+npm run diff        # Diffs the test baselines with generated one using tool set in environment variable DIFF
+npm run accept      # Accepts the test baselines
+```
