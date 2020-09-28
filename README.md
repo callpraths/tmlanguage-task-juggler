@@ -31,7 +31,11 @@ npm install
 
 ## Build
 
-Compile the yaml file into the tmLanguage and tmTheme files
+Compile the yaml file into the tmLanguage file.
+
+The generated files:
+
+- [syntax.tmLanguage](./syntax.tmLanguage)
 
 ``` sh
 npm run build:grammar
