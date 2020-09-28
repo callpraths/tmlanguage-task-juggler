@@ -19,7 +19,7 @@ for (const fileName of fs.readdirSync(casesFolder)) {
         before(done => {
             const text = fs.readFileSync(path.join(casesFolder, fileName), 'utf8');
             parsedFileName  = path.parse(fileName);
-            build.generateScopes(text, parsedFileName).then(result => {
+            build.generateScopes(text).then(result => {
                 wholeBaseline = result;
                 done();
             })
