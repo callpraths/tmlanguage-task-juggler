@@ -35,6 +35,36 @@
           </dict>
         </array>
       </dict>
+      <key>account</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>meta.type.tjp3</string>
+            <key>match</key>
+            <string>\s*(account)\s+(?:([\w_]+)\s+)?"([^"]+)"</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.tjp3</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>entity.name.type.tjp3</string>
+              </dict>
+              <key>3</key>
+              <dict>
+                <key>name</key>
+                <string>string.quoted.double.tjp3</string>
+              </dict>
+            </dict>
+          </dict>
+        </array>
+      </dict>
     </dict>
   </dict>
 </plist>

@@ -1,0 +1,12 @@
+original file
+-----------------------------------
+account "No ID"
+account has_id "No attributes"
+-----------------------------------
+
+>account "No ID"
+ ^^^^^^^^^^^^^^^^
+ source.tjp3
+>account has_id "No attributes"
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3

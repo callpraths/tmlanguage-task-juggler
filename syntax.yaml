@@ -15,3 +15,11 @@ repostiory:
     - contentName: comment.line.double-slash.tjp3
       begin: ^[ \t]+)?//
       end: (?=$)
+  account:
+    patterns:
+    - name: meta.type.tjp3
+      match: '\s*(account)\s+(?:([\w_]+)\s+)?"([^"]+)"'
+      captures:
+        '1': { name: storage.type.tjp3 }
+        '2': { name: entity.name.type.tjp3 }
+        '3': { name: string.quoted.double.tjp3 }
