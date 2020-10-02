@@ -5,8 +5,24 @@ account has_id "No attributes"
 -----------------------------------
 
 >account "No ID"
- ^^^^^^^^^^^^^^^^
- source.tjp3
+ ^^^^^^^
+ source.tjp3 meta.type.tjp3 storage.type.tjp3
+        ^^
+        source.tjp3 meta.type.tjp3
+          ^^^^^
+          source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
+               ^
+               source.tjp3 meta.type.tjp3
 >account has_id "No attributes"
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- source.tjp3
+ ^^^^^^^
+ source.tjp3 meta.type.tjp3 storage.type.tjp3
+        ^
+        source.tjp3 meta.type.tjp3
+         ^^^^^^
+         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+               ^^
+               source.tjp3 meta.type.tjp3
+                 ^^^^^^^^^^^^^
+                 source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
+                              ^
+                              source.tjp3 meta.type.tjp3

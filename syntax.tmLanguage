@@ -16,25 +16,11 @@
     <array>
       <dict>
         <key>include</key>
-        <string>#single-line-standalone-comment</string>
+        <string>#account</string>
       </dict>
     </array>
-    <key>repostiory</key>
+    <key>repository</key>
     <dict>
-      <key>single-line-standalone-comment</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>contentName</key>
-            <string>comment.line.double-slash.tjp3</string>
-            <key>begin</key>
-            <string>^[ \t]+)?//</string>
-            <key>end</key>
-            <string>(?=$)</string>
-          </dict>
-        </array>
-      </dict>
       <key>account</key>
       <dict>
         <key>patterns</key>
