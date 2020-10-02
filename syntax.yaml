@@ -13,7 +13,7 @@ repository:
   account:
     patterns:
     - name: meta.type.tjp3
-      match: '\s*(account)\s+(?:([a-zA-Z_][a-zA-Z0-9_]*)\s+)?"([^"]+)"'
+      match: '\s*(account)\s+(?:([a-zA-Z_][a-zA-Z0-9_]*)\s+)?"((?:[^"\\]|\\.)+)"'
       captures:
         '1': { name: storage.type.tjp3 }
         '2': { name: entity.name.type.tjp3 }

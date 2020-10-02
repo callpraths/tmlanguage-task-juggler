@@ -43,8 +43,9 @@ function generateScopesWorker(grammar: Grammar, oriLines: string[]): string {
         let line = oriLines[i];
         const mainLineTokens = tokenizeLine(grammar, line);
         cleanLines.push(line);
-        baselineLines.push(">" + line);
+        baselineLines.push("")
         for (let token of mainLineTokens) {
+            baselineLines.push(">" + line);
             writeTokenLine(token, baselineLines);
         }
     }
