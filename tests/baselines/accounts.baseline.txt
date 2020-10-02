@@ -2,6 +2,8 @@ original file
 -----------------------------------
 account "No ID"
 account has_id "No attributes"
+account 9invalidID ""
+account invalid*ID ""
 -----------------------------------
 
 >account "No ID"
@@ -26,3 +28,9 @@ account has_id "No attributes"
                  source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
                               ^
                               source.tjp3 meta.type.tjp3
+>account 9invalidID ""
+ ^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3
+>account invalid*ID ""
+ ^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3
