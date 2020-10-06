@@ -6,6 +6,10 @@ fileTypes: [tjp3]
 # Arbitrary UUID, until I figure out where this is used.
 uuid: 24341012-fbff-4468-926e-348ed6563de2
 
+macros:
+  stringDoubleQuoted: '"((?:[^"\\]|\\.)+)"'
+  string: '{{stringDoubleQuoted}}'
+
 patterns:
 - include: '#account'
 
@@ -13,7 +17,7 @@ repository:
   account:
     patterns:
     - name: meta.type.tjp3
-      match: '\s*(account)\s+(?:([a-zA-Z_][a-zA-Z0-9_]*)\s+)?"((?:[^"\\]|\\.)+)"'
+      match: '\s*(account)\s+(?:([a-zA-Z_][a-zA-Z0-9_]*)\s+)?{{string}}'
       captures:
         '1': { name: storage.type.tjp3 }
         '2': { name: entity.name.type.tjp3 }
