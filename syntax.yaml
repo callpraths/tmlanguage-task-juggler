@@ -8,7 +8,8 @@ uuid: 24341012-fbff-4468-926e-348ed6563de2
 
 macros:
   stringDoubleQuoted: \"(?:[^\"\\]|\\.)+\"
-  capturedStringSingleLine: ({{stringDoubleQuoted}})
+  stringSingleQuoted: \'(?:[^\'\\]|\\.)+\'
+  capturedStringSingleLine: ({{stringDoubleQuoted}}|{{stringSingleQuoted}})
 
 patterns:
 - include: '#account'
@@ -21,4 +22,4 @@ repository:
       captures:
         '1': { name: storage.type.tjp3 }
         '2': { name: entity.name.type.tjp3 }
-        '3': { name: string.quoted.double.tjp3 }
+        '3': { name: string.quoted.tjp3 }

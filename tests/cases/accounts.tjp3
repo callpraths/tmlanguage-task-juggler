@@ -2,6 +2,13 @@ account "No ID"
 account has_id "No attributes"
 account 9invalidID ""
 account invalid*ID ""
+
 account escapeDoubleQuotes "\""
 account escapeSomethingElseInDoubleQuotes "\n"
-account earlyTerminationOfDoubleQuotes "blah"foo"
+account earlyTerminationOfDoubleQuotes "included"excluded"
+account singleQuotesInDoubleQuotes "all'included"
+
+account escapeSingleQuotes '\''
+account escapeSomethingElseInSingleQuotes '\n'
+account earlyTerminationOfSingleQuotes 'included'excluded'
+account DoubleQuotesInSingleQuotes 'all"included'

@@ -4,9 +4,16 @@ account "No ID"
 account has_id "No attributes"
 account 9invalidID ""
 account invalid*ID ""
+
 account escapeDoubleQuotes "\""
 account escapeSomethingElseInDoubleQuotes "\n"
-account earlyTerminationOfDoubleQuotes "blah"foo"
+account earlyTerminationOfDoubleQuotes "included"excluded"
+account singleQuotesInDoubleQuotes "all'included"
+
+account escapeSingleQuotes '\''
+account escapeSomethingElseInSingleQuotes '\n'
+account earlyTerminationOfSingleQuotes 'included'excluded'
+account DoubleQuotesInSingleQuotes 'all"included'
 -----------------------------------
 
 
@@ -18,7 +25,7 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
         source.tjp3 meta.type.tjp3
 >account "No ID"
          ^^^^^^^
-         source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
+         source.tjp3 meta.type.tjp3 string.quoted.tjp3
 
 >account has_id "No attributes"
  ^^^^^^^
@@ -34,7 +41,7 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
                source.tjp3 meta.type.tjp3
 >account has_id "No attributes"
                 ^^^^^^^^^^^^^^^
-                source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
+                source.tjp3 meta.type.tjp3 string.quoted.tjp3
 
 >account 9invalidID ""
  ^^^^^^^^^^^^^^^^^^^^^^
@@ -42,6 +49,10 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
 
 >account invalid*ID ""
  ^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3
+
+>
+ ^
  source.tjp3
 
 >account escapeDoubleQuotes "\""
@@ -58,7 +69,7 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
                            source.tjp3 meta.type.tjp3
 >account escapeDoubleQuotes "\""
                             ^^^^
-                            source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
+                            source.tjp3 meta.type.tjp3 string.quoted.tjp3
 
 >account escapeSomethingElseInDoubleQuotes "\n"
  ^^^^^^^
@@ -74,23 +85,110 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
                                           source.tjp3 meta.type.tjp3
 >account escapeSomethingElseInDoubleQuotes "\n"
                                            ^^^^
-                                           source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
+                                           source.tjp3 meta.type.tjp3 string.quoted.tjp3
 
->account earlyTerminationOfDoubleQuotes "blah"foo"
+>account earlyTerminationOfDoubleQuotes "included"excluded"
  ^^^^^^^
  source.tjp3 meta.type.tjp3 storage.type.tjp3
->account earlyTerminationOfDoubleQuotes "blah"foo"
+>account earlyTerminationOfDoubleQuotes "included"excluded"
         ^
         source.tjp3 meta.type.tjp3
->account earlyTerminationOfDoubleQuotes "blah"foo"
+>account earlyTerminationOfDoubleQuotes "included"excluded"
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.tjp3 meta.type.tjp3 entity.name.type.tjp3
->account earlyTerminationOfDoubleQuotes "blah"foo"
+>account earlyTerminationOfDoubleQuotes "included"excluded"
                                        ^
                                        source.tjp3 meta.type.tjp3
->account earlyTerminationOfDoubleQuotes "blah"foo"
-                                        ^^^^^^
-                                        source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
->account earlyTerminationOfDoubleQuotes "blah"foo"
-                                              ^^^^^
-                                              source.tjp3
+>account earlyTerminationOfDoubleQuotes "included"excluded"
+                                        ^^^^^^^^^^
+                                        source.tjp3 meta.type.tjp3 string.quoted.tjp3
+>account earlyTerminationOfDoubleQuotes "included"excluded"
+                                                  ^^^^^^^^^^
+                                                  source.tjp3
+
+>account singleQuotesInDoubleQuotes "all'included"
+ ^^^^^^^
+ source.tjp3 meta.type.tjp3 storage.type.tjp3
+>account singleQuotesInDoubleQuotes "all'included"
+        ^
+        source.tjp3 meta.type.tjp3
+>account singleQuotesInDoubleQuotes "all'included"
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+>account singleQuotesInDoubleQuotes "all'included"
+                                   ^
+                                   source.tjp3 meta.type.tjp3
+>account singleQuotesInDoubleQuotes "all'included"
+                                    ^^^^^^^^^^^^^^
+                                    source.tjp3 meta.type.tjp3 string.quoted.tjp3
+
+>
+ ^
+ source.tjp3
+
+>account escapeSingleQuotes '\''
+ ^^^^^^^
+ source.tjp3 meta.type.tjp3 storage.type.tjp3
+>account escapeSingleQuotes '\''
+        ^
+        source.tjp3 meta.type.tjp3
+>account escapeSingleQuotes '\''
+         ^^^^^^^^^^^^^^^^^^
+         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+>account escapeSingleQuotes '\''
+                           ^
+                           source.tjp3 meta.type.tjp3
+>account escapeSingleQuotes '\''
+                            ^^^^
+                            source.tjp3 meta.type.tjp3 string.quoted.tjp3
+
+>account escapeSomethingElseInSingleQuotes '\n'
+ ^^^^^^^
+ source.tjp3 meta.type.tjp3 storage.type.tjp3
+>account escapeSomethingElseInSingleQuotes '\n'
+        ^
+        source.tjp3 meta.type.tjp3
+>account escapeSomethingElseInSingleQuotes '\n'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+>account escapeSomethingElseInSingleQuotes '\n'
+                                          ^
+                                          source.tjp3 meta.type.tjp3
+>account escapeSomethingElseInSingleQuotes '\n'
+                                           ^^^^
+                                           source.tjp3 meta.type.tjp3 string.quoted.tjp3
+
+>account earlyTerminationOfSingleQuotes 'included'excluded'
+ ^^^^^^^
+ source.tjp3 meta.type.tjp3 storage.type.tjp3
+>account earlyTerminationOfSingleQuotes 'included'excluded'
+        ^
+        source.tjp3 meta.type.tjp3
+>account earlyTerminationOfSingleQuotes 'included'excluded'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+>account earlyTerminationOfSingleQuotes 'included'excluded'
+                                       ^
+                                       source.tjp3 meta.type.tjp3
+>account earlyTerminationOfSingleQuotes 'included'excluded'
+                                        ^^^^^^^^^^
+                                        source.tjp3 meta.type.tjp3 string.quoted.tjp3
+>account earlyTerminationOfSingleQuotes 'included'excluded'
+                                                  ^^^^^^^^^^
+                                                  source.tjp3
+
+>account DoubleQuotesInSingleQuotes 'all"included'
+ ^^^^^^^
+ source.tjp3 meta.type.tjp3 storage.type.tjp3
+>account DoubleQuotesInSingleQuotes 'all"included'
+        ^
+        source.tjp3 meta.type.tjp3
+>account DoubleQuotesInSingleQuotes 'all"included'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+>account DoubleQuotesInSingleQuotes 'all"included'
+                                   ^
+                                   source.tjp3 meta.type.tjp3
+>account DoubleQuotesInSingleQuotes 'all"included'
+                                    ^^^^^^^^^^^^^^
+                                    source.tjp3 meta.type.tjp3 string.quoted.tjp3
