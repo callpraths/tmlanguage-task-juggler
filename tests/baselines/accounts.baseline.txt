@@ -14,14 +14,11 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
  ^^^^^^^
  source.tjp3 meta.type.tjp3 storage.type.tjp3
 >account "No ID"
-        ^^
+        ^
         source.tjp3 meta.type.tjp3
 >account "No ID"
-          ^^^^^
-          source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
->account "No ID"
-               ^
-               source.tjp3 meta.type.tjp3
+         ^^^^^^^
+         source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
 
 >account has_id "No attributes"
  ^^^^^^^
@@ -33,14 +30,11 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
          ^^^^^^
          source.tjp3 meta.type.tjp3 entity.name.type.tjp3
 >account has_id "No attributes"
-               ^^
+               ^
                source.tjp3 meta.type.tjp3
 >account has_id "No attributes"
-                 ^^^^^^^^^^^^^
-                 source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
->account has_id "No attributes"
-                              ^
-                              source.tjp3 meta.type.tjp3
+                ^^^^^^^^^^^^^^^
+                source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
 
 >account 9invalidID ""
  ^^^^^^^^^^^^^^^^^^^^^^
@@ -60,14 +54,11 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
          ^^^^^^^^^^^^^^^^^^
          source.tjp3 meta.type.tjp3 entity.name.type.tjp3
 >account escapeDoubleQuotes "\""
-                           ^^
+                           ^
                            source.tjp3 meta.type.tjp3
 >account escapeDoubleQuotes "\""
-                             ^^
-                             source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
->account escapeDoubleQuotes "\""
-                               ^
-                               source.tjp3 meta.type.tjp3
+                            ^^^^
+                            source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
 
 >account escapeSomethingElseInDoubleQuotes "\n"
  ^^^^^^^
@@ -79,14 +70,11 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.tjp3 meta.type.tjp3 entity.name.type.tjp3
 >account escapeSomethingElseInDoubleQuotes "\n"
-                                          ^^
+                                          ^
                                           source.tjp3 meta.type.tjp3
 >account escapeSomethingElseInDoubleQuotes "\n"
-                                            ^^
-                                            source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
->account escapeSomethingElseInDoubleQuotes "\n"
-                                              ^
-                                              source.tjp3 meta.type.tjp3
+                                           ^^^^
+                                           source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
 
 >account earlyTerminationOfDoubleQuotes "blah"foo"
  ^^^^^^^
@@ -98,14 +86,11 @@ account earlyTerminationOfDoubleQuotes "blah"foo"
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          source.tjp3 meta.type.tjp3 entity.name.type.tjp3
 >account earlyTerminationOfDoubleQuotes "blah"foo"
-                                       ^^
+                                       ^
                                        source.tjp3 meta.type.tjp3
 >account earlyTerminationOfDoubleQuotes "blah"foo"
-                                         ^^^^
-                                         source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
->account earlyTerminationOfDoubleQuotes "blah"foo"
-                                             ^
-                                             source.tjp3 meta.type.tjp3
+                                        ^^^^^^
+                                        source.tjp3 meta.type.tjp3 string.quoted.double.tjp3
 >account earlyTerminationOfDoubleQuotes "blah"foo"
                                               ^^^^^
                                               source.tjp3

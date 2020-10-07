@@ -29,7 +29,7 @@
             <key>name</key>
             <string>meta.type.tjp3</string>
             <key>match</key>
-            <string>\s*(account)\s+(?:([a-zA-Z_][a-zA-Z0-9_]*)\s+)?"((?:[^"\\]|\\.)+)"</string>
+            <string>\s*(account)\s+(?:([a-zA-Z_][a-zA-Z0-9_]*)\s+)?(\"(?:[^\"\\]|\\.)+\")</string>
             <key>captures</key>
             <dict>
               <key>1</key>
