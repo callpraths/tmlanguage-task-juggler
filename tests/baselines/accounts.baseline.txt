@@ -22,11 +22,15 @@ account "Empty Body" {}
 account "with flags" {
   flags singleFlag
   flags firstFlag, secondFlag
-  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
   flagsMustBeFirstOnLine flags
   flags
 flags NoLeadingSpace
 	flags LeadingTab
+  flags firstFlag,
+      secondFlag,
+        third_flag, last_flag
+  flags finalFlag
 }
 -----------------------------------
 
@@ -284,21 +288,30 @@ flags NoLeadingSpace
                     ^^^^^^^^^^
                     source.tjp3 entity.name.type.flags.tjp3
 
->  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
  ^^
  source.tjp3
->  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
    ^^^^^
    source.tjp3 storage.type.flags.tjp3
->  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
         ^
         source.tjp3
->  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
          ^^^^^^
          source.tjp3 entity.name.type.flags.tjp3
->  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
+               ^^^
                source.tjp3
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  source.tjp3 entity.name.type.flags.tjp3
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
+                                                     ^^
+                                                     source.tjp3
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
+                                                       ^^^^^^^^^^^^^
+                                                       source.tjp3 entity.name.type.flags.tjp3
 
 >  flagsMustBeFirstOnLine flags
  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -333,6 +346,58 @@ flags NoLeadingSpace
 > flags LeadingTab
         ^^^^^^^^^^
         source.tjp3 entity.name.type.flags.tjp3
+
+>  flags firstFlag,
+ ^^
+ source.tjp3
+>  flags firstFlag,
+   ^^^^^
+   source.tjp3 storage.type.flags.tjp3
+>  flags firstFlag,
+        ^
+        source.tjp3
+>  flags firstFlag,
+         ^^^^^^^^^
+         source.tjp3 entity.name.type.flags.tjp3
+>  flags firstFlag,
+                  ^^
+                  source.tjp3
+
+>      secondFlag,
+ ^^^^^^
+ source.tjp3
+>      secondFlag,
+       ^^^^^^^^^^
+       source.tjp3 entity.name.type.flags.tjp3
+>      secondFlag,
+                 ^^
+                 source.tjp3
+
+>        third_flag, last_flag
+ ^^^^^^^^
+ source.tjp3
+>        third_flag, last_flag
+         ^^^^^^^^^^
+         source.tjp3 entity.name.type.flags.tjp3
+>        third_flag, last_flag
+                   ^^
+                   source.tjp3
+>        third_flag, last_flag
+                     ^^^^^^^^^
+                     source.tjp3 entity.name.type.flags.tjp3
+
+>  flags finalFlag
+ ^^
+ source.tjp3
+>  flags finalFlag
+   ^^^^^
+   source.tjp3 storage.type.flags.tjp3
+>  flags finalFlag
+        ^
+        source.tjp3
+>  flags finalFlag
+         ^^^^^^^^^
+         source.tjp3 entity.name.type.flags.tjp3
 
 >}
  ^

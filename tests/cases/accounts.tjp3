@@ -20,9 +20,13 @@ account "Empty Body" {}
 account "with flags" {
   flags singleFlag
   flags firstFlag, secondFlag
-  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+  flags okFlag, +corruptedFlagDoesNotAffectFlagScope, anotherOKFlag
   flagsMustBeFirstOnLine flags
   flags
 flags NoLeadingSpace
 	flags LeadingTab
+  flags firstFlag,
+      secondFlag,
+        third_flag, last_flag
+  flags finalFlag
 }
