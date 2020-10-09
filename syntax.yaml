@@ -28,10 +28,7 @@ repository:
         '3': { name: string.quoted.tjp3 }
       patterns:
         - include: '#string'
-        - match: '^\s*(flags)\s*$'
-          captures:
-            '1': { name: storage.type.flags.tjp3 }
-        - begin: '^\s*(flags)\s'
+        - begin: '^\s*(flags)\b'
           end: '{{endOfListAttribute}}'
           beginCaptures:
             '1': { name: storage.type.flags.tjp3 }

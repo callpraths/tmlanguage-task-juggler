@@ -55,20 +55,8 @@
                 <string>#string</string>
               </dict>
               <dict>
-                <key>match</key>
-                <string>^\s*(flags)\s*$</string>
-                <key>captures</key>
-                <dict>
-                  <key>1</key>
-                  <dict>
-                    <key>name</key>
-                    <string>storage.type.flags.tjp3</string>
-                  </dict>
-                </dict>
-              </dict>
-              <dict>
                 <key>begin</key>
-                <string>^\s*(flags)\s</string>
+                <string>^\s*(flags)\b</string>
                 <key>end</key>
                 <string>(?:(?&lt;![,\s])\s*$)</string>
                 <key>beginCaptures</key>
