@@ -55,37 +55,8 @@
                 <string>#string</string>
               </dict>
               <dict>
-                <key>begin</key>
-                <string>^\s*(flags)\b</string>
-                <key>end</key>
-                <string>(?:(?&lt;![,\s])\s*$)</string>
-                <key>beginCaptures</key>
-                <dict>
-                  <key>1</key>
-                  <dict>
-                    <key>name</key>
-                    <string>storage.type.flags.tjp3</string>
-                  </dict>
-                </dict>
-                <key>patterns</key>
-                <array>
-                  <dict>
-                    <key>include</key>
-                    <string>#string</string>
-                  </dict>
-                  <dict>
-                    <key>match</key>
-                    <string>((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))</string>
-                    <key>captures</key>
-                    <dict>
-                      <key>1</key>
-                      <dict>
-                        <key>name</key>
-                        <string>entity.name.type.flags.tjp3</string>
-                      </dict>
-                    </dict>
-                  </dict>
-                </array>
+                <key>include</key>
+                <string>#flags</string>
               </dict>
             </array>
           </dict>
@@ -122,6 +93,45 @@
             <string>string.quoted.tjp3</string>
             <key>match</key>
             <string>(?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\')</string>
+          </dict>
+        </array>
+      </dict>
+      <key>flags</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>begin</key>
+            <string>^\s*(flags)\b</string>
+            <key>end</key>
+            <string>(?:(?&lt;![,\s])\s*$)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.flags.tjp3</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#string</string>
+              </dict>
+              <dict>
+                <key>match</key>
+                <string>((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))</string>
+                <key>captures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>entity.name.type.flags.tjp3</string>
+                  </dict>
+                </dict>
+              </dict>
+            </array>
           </dict>
         </array>
       </dict>

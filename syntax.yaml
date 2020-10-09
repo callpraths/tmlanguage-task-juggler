@@ -28,15 +28,7 @@ repository:
         '3': { name: string.quoted.tjp3 }
       patterns:
         - include: '#string'
-        - begin: '^\s*(flags)\b'
-          end: '{{endOfListAttribute}}'
-          beginCaptures:
-            '1': { name: storage.type.flags.tjp3 }
-          patterns:
-            - include: '#string'
-            - match: '({{ID}})'
-              captures:
-                '1': { name: entity.name.type.flags.tjp3 }
+        - include: '#flags'
     - match: '^\s*(account)\b\s*(?:({{ID}})\s+)?({{stringSingleLine}})'
       captures:
         '1': { name: storage.type.account.tjp3 }
@@ -46,3 +38,14 @@ repository:
     patterns:
       - name: string.quoted.tjp3
         match: '{{stringSingleLine}}'
+  flags:
+    patterns:
+      - begin: '^\s*(flags)\b'
+        end: '{{endOfListAttribute}}'
+        beginCaptures:
+          '1': { name: storage.type.flags.tjp3 }
+        patterns:
+          - include: '#string'
+          - match: '({{ID}})'
+            captures:
+              '1': { name: entity.name.type.flags.tjp3 }
