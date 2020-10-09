@@ -45,7 +45,8 @@ function generateScopesWorker(grammar: Grammar, oriLines: string[]): string {
         cleanLines.push(line);
         baselineLines.push("")
         for (let token of mainLineTokens) {
-            baselineLines.push(">" + line);
+            // Render tabs as single space to align with the tokens.
+            baselineLines.push(">" + line.replace("\t", " "));
             writeTokenLine(token, baselineLines);
         }
     }

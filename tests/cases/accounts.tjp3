@@ -18,4 +18,7 @@ account "with flags" {
   flags firstFlag, secondFlag
   flags okFlag, +corruptedFlagDoesNotAffectFlagScope
   flagsMustBeFirstOnLine flags
+  flags
+flags NoLeadingSpace
+	flags LeadingTab
 }

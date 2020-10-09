@@ -20,6 +20,9 @@ account "with flags" {
   flags firstFlag, secondFlag
   flags okFlag, +corruptedFlagDoesNotAffectFlagScope
   flagsMustBeFirstOnLine flags
+  flags
+flags NoLeadingSpace
+	flags LeadingTab
 }
 -----------------------------------
 
@@ -259,6 +262,36 @@ account "with flags" {
 >  flagsMustBeFirstOnLine flags
  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  source.tjp3 meta.account.tjp3
+
+>  flags
+ ^^
+ source.tjp3 meta.account.tjp3
+>  flags
+   ^^^^^
+   source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+
+>flags NoLeadingSpace
+ ^^^^^
+ source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+>flags NoLeadingSpace
+      ^
+      source.tjp3 meta.account.tjp3
+>flags NoLeadingSpace
+       ^^^^^^^^^^^^^^^
+       source.tjp3 meta.account.tjp3
+
+> flags LeadingTab
+ ^
+ source.tjp3 meta.account.tjp3
+> flags LeadingTab
+  ^^^^^
+  source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+> flags LeadingTab
+       ^
+       source.tjp3 meta.account.tjp3
+> flags LeadingTab
+        ^^^^^^^^^^^
+        source.tjp3 meta.account.tjp3
 
 >}
  ^
