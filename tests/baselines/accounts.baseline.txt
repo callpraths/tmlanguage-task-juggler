@@ -230,8 +230,8 @@ flags NoLeadingSpace
         ^
         source.tjp3
 >  flags singleFlag
-         ^^^^^^^^^^^
-         source.tjp3
+         ^^^^^^^^^^
+         source.tjp3 entity.name.type.flags.tjp3
 
 >  flags firstFlag, secondFlag
  ^^
@@ -243,8 +243,14 @@ flags NoLeadingSpace
         ^
         source.tjp3
 >  flags firstFlag, secondFlag
-         ^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3
+         ^^^^^^^^^
+         source.tjp3 entity.name.type.flags.tjp3
+>  flags firstFlag, secondFlag
+                  ^^
+                  source.tjp3
+>  flags firstFlag, secondFlag
+                    ^^^^^^^^^^
+                    source.tjp3 entity.name.type.flags.tjp3
 
 >  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
  ^^
@@ -256,8 +262,11 @@ flags NoLeadingSpace
         ^
         source.tjp3
 >  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3
+         ^^^^^^
+         source.tjp3 entity.name.type.flags.tjp3
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               source.tjp3
 
 >  flagsMustBeFirstOnLine flags
  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -277,8 +286,8 @@ flags NoLeadingSpace
       ^
       source.tjp3
 >flags NoLeadingSpace
-       ^^^^^^^^^^^^^^^
-       source.tjp3
+       ^^^^^^^^^^^^^^
+       source.tjp3 entity.name.type.flags.tjp3
 
 > flags LeadingTab
  ^
@@ -290,8 +299,8 @@ flags NoLeadingSpace
        ^
        source.tjp3
 > flags LeadingTab
-        ^^^^^^^^^^^
-        source.tjp3
+        ^^^^^^^^^^
+        source.tjp3 entity.name.type.flags.tjp3
 
 >}
  ^

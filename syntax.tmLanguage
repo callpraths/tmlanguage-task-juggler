@@ -52,13 +52,23 @@
             <array>
               <dict>
                 <key>match</key>
-                <string>^\s*(flags)\s</string>
+                <string>^\s*(flags)\s(?:((?:[a-zA-Z_][a-zA-Z0-9_]*))(?:\s*,\s*((?:[a-zA-Z_][a-zA-Z0-9_]*)))*)?</string>
                 <key>captures</key>
                 <dict>
                   <key>1</key>
                   <dict>
                     <key>name</key>
                     <string>storage.type.flags.tjp3</string>
+                  </dict>
+                  <key>2</key>
+                  <dict>
+                    <key>name</key>
+                    <string>entity.name.type.flags.tjp3</string>
+                  </dict>
+                  <key>3</key>
+                  <dict>
+                    <key>name</key>
+                    <string>entity.name.type.flags.tjp3</string>
                   </dict>
                 </dict>
               </dict>
