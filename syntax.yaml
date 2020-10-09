@@ -7,7 +7,8 @@ fileTypes: [tjp3]
 uuid: 24341012-fbff-4468-926e-348ed6563de2
 
 macros:
-  capturedID: ([a-zA-Z_][a-zA-Z0-9_]*)
+  ID: (?:[a-zA-Z_][a-zA-Z0-9_]*)
+  capturedID: ({{ID}})
   stringDoubleQuoted: \"(?:[^\"\\]|\\.)+\"
   stringSingleQuoted: \'(?:[^\'\\]|\\.)+\'
   capturedStringSingleLine: ({{stringDoubleQuoted}}|{{stringSingleQuoted}})
@@ -18,6 +19,18 @@ patterns:
 repository:
   account:
     patterns:
+    # Order matters: Multi-line pattern must preceded the single line version.
+    - name: meta.account.tjp3
+      begin: '\s*(account)\s+(?:{{capturedID}}\s+)?{{capturedStringSingleLine}}\s*\{'
+      end: '\}'
+      beginCaptures:
+        '1': { name: storage.type.tjp3 }
+        '2': { name: entity.name.type.tjp3 }
+        '3': { name: string.quoted.tjp3 }
+      patterns:
+        - match: '^\s*(flags)\s'
+          captures:
+            '1': { name: entity.name.tag.flags.tjp3 }
     - name: meta.type.tjp3
       match: '\s*(account)\s+(?:{{capturedID}}\s+)?{{capturedStringSingleLine}}'
       captures:

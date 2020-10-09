@@ -14,6 +14,13 @@ account escapeSingleQuotes '\''
 account escapeSomethingElseInSingleQuotes '\n'
 account earlyTerminationOfSingleQuotes 'included'excluded'
 account DoubleQuotesInSingleQuotes 'all"included'
+
+account "with flags" {
+  flags singleFlag
+  flags firstFlag, secondFlag
+  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+  flagsMustBeFirstOnLine flags
+}
 -----------------------------------
 
 
@@ -192,3 +199,67 @@ account DoubleQuotesInSingleQuotes 'all"included'
 >account DoubleQuotesInSingleQuotes 'all"included'
                                     ^^^^^^^^^^^^^^
                                     source.tjp3 meta.type.tjp3 string.quoted.tjp3
+
+>
+ ^
+ source.tjp3
+
+>account "with flags" {
+ ^^^^^^^
+ source.tjp3 meta.account.tjp3 storage.type.tjp3
+>account "with flags" {
+        ^
+        source.tjp3 meta.account.tjp3
+>account "with flags" {
+         ^^^^^^^^^^^^
+         source.tjp3 meta.account.tjp3 string.quoted.tjp3
+>account "with flags" {
+                     ^^
+                     source.tjp3 meta.account.tjp3
+
+>  flags singleFlag
+ ^^
+ source.tjp3 meta.account.tjp3
+>  flags singleFlag
+   ^^^^^
+   source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+>  flags singleFlag
+        ^
+        source.tjp3 meta.account.tjp3
+>  flags singleFlag
+         ^^^^^^^^^^^
+         source.tjp3 meta.account.tjp3
+
+>  flags firstFlag, secondFlag
+ ^^
+ source.tjp3 meta.account.tjp3
+>  flags firstFlag, secondFlag
+   ^^^^^
+   source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+>  flags firstFlag, secondFlag
+        ^
+        source.tjp3 meta.account.tjp3
+>  flags firstFlag, secondFlag
+         ^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 meta.account.tjp3
+
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+ ^^
+ source.tjp3 meta.account.tjp3
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+   ^^^^^
+   source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+        ^
+        source.tjp3 meta.account.tjp3
+>  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 meta.account.tjp3
+
+>  flagsMustBeFirstOnLine flags
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3 meta.account.tjp3
+
+>}
+ ^
+ source.tjp3 meta.account.tjp3
