@@ -13,6 +13,10 @@ account escapeSomethingElseInSingleQuotes '\n'
 account earlyTerminationOfSingleQuotes 'included'excluded'
 account DoubleQuotesInSingleQuotes 'all"included'
 
+accountMustBeFirstOnLine account "No ID"
+
+account "Empty Body" {}
+
 account "with flags" {
   flags singleFlag
   flags firstFlag, secondFlag

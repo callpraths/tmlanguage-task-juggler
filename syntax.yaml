@@ -19,7 +19,7 @@ repository:
   account:
     patterns:
     # Order matters: Multi-line pattern must preceded the single line version.
-    - begin: '\s*(account)\s+(?:({{ID}})\s+)?({{stringSingleLine}})\s*\{'
+    - begin: '^\s*(account)\s+(?:({{ID}})\s+)?({{stringSingleLine}})\s*\{'
       end: '\}'
       beginCaptures:
         '1': { name: storage.type.account.tjp3 }
@@ -31,7 +31,7 @@ repository:
             '1': { name: storage.type.flags.tjp3 }
             '2': { name: entity.name.type.flags.tjp3 }
             '3': { name: entity.name.type.flags.tjp3 }
-    - match: '\s*(account)\s+(?:({{ID}})\s+)?({{stringSingleLine}})'
+    - match: '^\s*(account)\s+(?:({{ID}})\s+)?({{stringSingleLine}})'
       captures:
         '1': { name: storage.type.account.tjp3 }
         '2': { name: entity.name.type.account.tjp3 }

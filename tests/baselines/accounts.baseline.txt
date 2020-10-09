@@ -15,6 +15,10 @@ account escapeSomethingElseInSingleQuotes '\n'
 account earlyTerminationOfSingleQuotes 'included'excluded'
 account DoubleQuotesInSingleQuotes 'all"included'
 
+accountMustBeFirstOnLine account "No ID"
+
+account "Empty Body" {}
+
 account "with flags" {
   flags singleFlag
   flags firstFlag, secondFlag
@@ -202,6 +206,34 @@ flags NoLeadingSpace
 >account DoubleQuotesInSingleQuotes 'all"included'
                                     ^^^^^^^^^^^^^^
                                     source.tjp3 string.quoted.tjp3
+
+>
+ ^
+ source.tjp3
+
+>accountMustBeFirstOnLine account "No ID"
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>account "Empty Body" {}
+ ^^^^^^^
+ source.tjp3 storage.type.account.tjp3
+>account "Empty Body" {}
+        ^
+        source.tjp3
+>account "Empty Body" {}
+         ^^^^^^^^^^^^
+         source.tjp3 string.quoted.tjp3
+>account "Empty Body" {}
+                     ^^
+                     source.tjp3
+>account "Empty Body" {}
+                       ^
+                       source.tjp3
 
 >
  ^
