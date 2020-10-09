@@ -30,3 +30,9 @@ flags NoLeadingSpace
         third_flag, last_flag
   flags finalFlag
 }
+
+account "string wins everywhere" {
+  "this is a single line string"
+  'this is also a single line string'
+  flags "there should be no string here", 'alas' the_flag
+}

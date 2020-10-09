@@ -32,6 +32,12 @@ flags NoLeadingSpace
         third_flag, last_flag
   flags finalFlag
 }
+
+account "string wins everywhere" {
+  "this is a single line string"
+  'this is also a single line string'
+  flags "there should be no string here", 'alas' the_flag
+}
 -----------------------------------
 
 
@@ -398,6 +404,66 @@ flags NoLeadingSpace
 >  flags finalFlag
          ^^^^^^^^^
          source.tjp3 entity.name.type.flags.tjp3
+
+>}
+ ^
+ source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>account "string wins everywhere" {
+ ^^^^^^^
+ source.tjp3 storage.type.account.tjp3
+>account "string wins everywhere" {
+        ^
+        source.tjp3
+>account "string wins everywhere" {
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 string.quoted.tjp3
+>account "string wins everywhere" {
+                                 ^^
+                                 source.tjp3
+
+>  "this is a single line string"
+ ^^
+ source.tjp3
+>  "this is a single line string"
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.tjp3 string.quoted.tjp3
+
+>  'this is also a single line string'
+ ^^
+ source.tjp3
+>  'this is also a single line string'
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.tjp3 string.quoted.tjp3
+
+>  flags "there should be no string here", 'alas' the_flag
+ ^^
+ source.tjp3
+>  flags "there should be no string here", 'alas' the_flag
+   ^^^^^
+   source.tjp3 storage.type.flags.tjp3
+>  flags "there should be no string here", 'alas' the_flag
+        ^
+        source.tjp3
+>  flags "there should be no string here", 'alas' the_flag
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 string.quoted.tjp3
+>  flags "there should be no string here", 'alas' the_flag
+                                         ^^
+                                         source.tjp3
+>  flags "there should be no string here", 'alas' the_flag
+                                           ^^^^^^
+                                           source.tjp3 string.quoted.tjp3
+>  flags "there should be no string here", 'alas' the_flag
+                                                 ^
+                                                 source.tjp3
+>  flags "there should be no string here", 'alas' the_flag
+                                                  ^^^^^^^^
+                                                  source.tjp3 entity.name.type.flags.tjp3
 
 >}
  ^
