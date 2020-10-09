@@ -26,8 +26,6 @@
         <key>patterns</key>
         <array>
           <dict>
-            <key>name</key>
-            <string>meta.account.tjp3</string>
             <key>begin</key>
             <string>\s*(account)\s+(?:((?:[a-zA-Z_][a-zA-Z0-9_]*))\s+)?(\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\')\s*\{</string>
             <key>end</key>
@@ -37,12 +35,12 @@
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>storage.type.tjp3</string>
+                <string>storage.type.account.tjp3</string>
               </dict>
               <key>2</key>
               <dict>
                 <key>name</key>
-                <string>entity.name.type.tjp3</string>
+                <string>entity.name.type.account.tjp3</string>
               </dict>
               <key>3</key>
               <dict>
@@ -60,15 +58,13 @@
                   <key>1</key>
                   <dict>
                     <key>name</key>
-                    <string>entity.name.tag.flags.tjp3</string>
+                    <string>storage.type.flags.tjp3</string>
                   </dict>
                 </dict>
               </dict>
             </array>
           </dict>
           <dict>
-            <key>name</key>
-            <string>meta.type.tjp3</string>
             <key>match</key>
             <string>\s*(account)\s+(?:((?:[a-zA-Z_][a-zA-Z0-9_]*))\s+)?(\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\')</string>
             <key>captures</key>
@@ -76,12 +72,12 @@
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>storage.type.tjp3</string>
+                <string>storage.type.account.tjp3</string>
               </dict>
               <key>2</key>
               <dict>
                 <key>name</key>
-                <string>entity.name.type.tjp3</string>
+                <string>entity.name.type.account.tjp3</string>
               </dict>
               <key>3</key>
               <dict>

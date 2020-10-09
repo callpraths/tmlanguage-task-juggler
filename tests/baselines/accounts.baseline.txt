@@ -29,29 +29,29 @@ flags NoLeadingSpace
 
 >account "No ID"
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account "No ID"
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account "No ID"
          ^^^^^^^
-         source.tjp3 meta.type.tjp3 string.quoted.tjp3
+         source.tjp3 string.quoted.tjp3
 
 >account has_id "No attributes"
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account has_id "No attributes"
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account has_id "No attributes"
          ^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account has_id "No attributes"
                ^
-               source.tjp3 meta.type.tjp3
+               source.tjp3
 >account has_id "No attributes"
                 ^^^^^^^^^^^^^^^
-                source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                source.tjp3 string.quoted.tjp3
 
 >account 9invalidID ""
  ^^^^^^^^^^^^^^^^^^^^^^
@@ -67,70 +67,70 @@ flags NoLeadingSpace
 
 >account escapeDoubleQuotes "\""
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account escapeDoubleQuotes "\""
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account escapeDoubleQuotes "\""
          ^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account escapeDoubleQuotes "\""
                            ^
-                           source.tjp3 meta.type.tjp3
+                           source.tjp3
 >account escapeDoubleQuotes "\""
                             ^^^^
-                            source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                            source.tjp3 string.quoted.tjp3
 
 >account escapeSomethingElseInDoubleQuotes "\n"
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account escapeSomethingElseInDoubleQuotes "\n"
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account escapeSomethingElseInDoubleQuotes "\n"
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account escapeSomethingElseInDoubleQuotes "\n"
                                           ^
-                                          source.tjp3 meta.type.tjp3
+                                          source.tjp3
 >account escapeSomethingElseInDoubleQuotes "\n"
                                            ^^^^
-                                           source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                                           source.tjp3 string.quoted.tjp3
 
 >account earlyTerminationOfDoubleQuotes "included"excluded"
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account earlyTerminationOfDoubleQuotes "included"excluded"
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account earlyTerminationOfDoubleQuotes "included"excluded"
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account earlyTerminationOfDoubleQuotes "included"excluded"
                                        ^
-                                       source.tjp3 meta.type.tjp3
+                                       source.tjp3
 >account earlyTerminationOfDoubleQuotes "included"excluded"
                                         ^^^^^^^^^^
-                                        source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                                        source.tjp3 string.quoted.tjp3
 >account earlyTerminationOfDoubleQuotes "included"excluded"
                                                   ^^^^^^^^^^
                                                   source.tjp3
 
 >account singleQuotesInDoubleQuotes "all'included"
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account singleQuotesInDoubleQuotes "all'included"
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account singleQuotesInDoubleQuotes "all'included"
          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account singleQuotesInDoubleQuotes "all'included"
                                    ^
-                                   source.tjp3 meta.type.tjp3
+                                   source.tjp3
 >account singleQuotesInDoubleQuotes "all'included"
                                     ^^^^^^^^^^^^^^
-                                    source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                                    source.tjp3 string.quoted.tjp3
 
 >
  ^
@@ -138,70 +138,70 @@ flags NoLeadingSpace
 
 >account escapeSingleQuotes '\''
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account escapeSingleQuotes '\''
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account escapeSingleQuotes '\''
          ^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account escapeSingleQuotes '\''
                            ^
-                           source.tjp3 meta.type.tjp3
+                           source.tjp3
 >account escapeSingleQuotes '\''
                             ^^^^
-                            source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                            source.tjp3 string.quoted.tjp3
 
 >account escapeSomethingElseInSingleQuotes '\n'
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account escapeSomethingElseInSingleQuotes '\n'
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account escapeSomethingElseInSingleQuotes '\n'
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account escapeSomethingElseInSingleQuotes '\n'
                                           ^
-                                          source.tjp3 meta.type.tjp3
+                                          source.tjp3
 >account escapeSomethingElseInSingleQuotes '\n'
                                            ^^^^
-                                           source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                                           source.tjp3 string.quoted.tjp3
 
 >account earlyTerminationOfSingleQuotes 'included'excluded'
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account earlyTerminationOfSingleQuotes 'included'excluded'
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account earlyTerminationOfSingleQuotes 'included'excluded'
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account earlyTerminationOfSingleQuotes 'included'excluded'
                                        ^
-                                       source.tjp3 meta.type.tjp3
+                                       source.tjp3
 >account earlyTerminationOfSingleQuotes 'included'excluded'
                                         ^^^^^^^^^^
-                                        source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                                        source.tjp3 string.quoted.tjp3
 >account earlyTerminationOfSingleQuotes 'included'excluded'
                                                   ^^^^^^^^^^
                                                   source.tjp3
 
 >account DoubleQuotesInSingleQuotes 'all"included'
  ^^^^^^^
- source.tjp3 meta.type.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account DoubleQuotesInSingleQuotes 'all"included'
         ^
-        source.tjp3 meta.type.tjp3
+        source.tjp3
 >account DoubleQuotesInSingleQuotes 'all"included'
          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.type.tjp3 entity.name.type.tjp3
+         source.tjp3 entity.name.type.account.tjp3
 >account DoubleQuotesInSingleQuotes 'all"included'
                                    ^
-                                   source.tjp3 meta.type.tjp3
+                                   source.tjp3
 >account DoubleQuotesInSingleQuotes 'all"included'
                                     ^^^^^^^^^^^^^^
-                                    source.tjp3 meta.type.tjp3 string.quoted.tjp3
+                                    source.tjp3 string.quoted.tjp3
 
 >
  ^
@@ -209,90 +209,90 @@ flags NoLeadingSpace
 
 >account "with flags" {
  ^^^^^^^
- source.tjp3 meta.account.tjp3 storage.type.tjp3
+ source.tjp3 storage.type.account.tjp3
 >account "with flags" {
         ^
-        source.tjp3 meta.account.tjp3
+        source.tjp3
 >account "with flags" {
          ^^^^^^^^^^^^
-         source.tjp3 meta.account.tjp3 string.quoted.tjp3
+         source.tjp3 string.quoted.tjp3
 >account "with flags" {
                      ^^
-                     source.tjp3 meta.account.tjp3
+                     source.tjp3
 
 >  flags singleFlag
  ^^
- source.tjp3 meta.account.tjp3
+ source.tjp3
 >  flags singleFlag
    ^^^^^
-   source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+   source.tjp3 storage.type.flags.tjp3
 >  flags singleFlag
         ^
-        source.tjp3 meta.account.tjp3
+        source.tjp3
 >  flags singleFlag
          ^^^^^^^^^^^
-         source.tjp3 meta.account.tjp3
+         source.tjp3
 
 >  flags firstFlag, secondFlag
  ^^
- source.tjp3 meta.account.tjp3
+ source.tjp3
 >  flags firstFlag, secondFlag
    ^^^^^
-   source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+   source.tjp3 storage.type.flags.tjp3
 >  flags firstFlag, secondFlag
         ^
-        source.tjp3 meta.account.tjp3
+        source.tjp3
 >  flags firstFlag, secondFlag
          ^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.account.tjp3
+         source.tjp3
 
 >  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
  ^^
- source.tjp3 meta.account.tjp3
+ source.tjp3
 >  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
    ^^^^^
-   source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+   source.tjp3 storage.type.flags.tjp3
 >  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
         ^
-        source.tjp3 meta.account.tjp3
+        source.tjp3
 >  flags okFlag, +corruptedFlagDoesNotAffectFlagScope
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 meta.account.tjp3
+         source.tjp3
 
 >  flagsMustBeFirstOnLine flags
  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- source.tjp3 meta.account.tjp3
+ source.tjp3
 
 >  flags
  ^^
- source.tjp3 meta.account.tjp3
+ source.tjp3
 >  flags
    ^^^^^
-   source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+   source.tjp3 storage.type.flags.tjp3
 
 >flags NoLeadingSpace
  ^^^^^
- source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+ source.tjp3 storage.type.flags.tjp3
 >flags NoLeadingSpace
       ^
-      source.tjp3 meta.account.tjp3
+      source.tjp3
 >flags NoLeadingSpace
        ^^^^^^^^^^^^^^^
-       source.tjp3 meta.account.tjp3
+       source.tjp3
 
 > flags LeadingTab
  ^
- source.tjp3 meta.account.tjp3
+ source.tjp3
 > flags LeadingTab
   ^^^^^
-  source.tjp3 meta.account.tjp3 entity.name.tag.flags.tjp3
+  source.tjp3 storage.type.flags.tjp3
 > flags LeadingTab
        ^
-       source.tjp3 meta.account.tjp3
+       source.tjp3
 > flags LeadingTab
         ^^^^^^^^^^^
-        source.tjp3 meta.account.tjp3
+        source.tjp3
 
 >}
  ^
- source.tjp3 meta.account.tjp3
+ source.tjp3

@@ -20,20 +20,18 @@ repository:
   account:
     patterns:
     # Order matters: Multi-line pattern must preceded the single line version.
-    - name: meta.account.tjp3
-      begin: '\s*(account)\s+(?:{{capturedID}}\s+)?{{capturedStringSingleLine}}\s*\{'
+    - begin: '\s*(account)\s+(?:{{capturedID}}\s+)?{{capturedStringSingleLine}}\s*\{'
       end: '\}'
       beginCaptures:
-        '1': { name: storage.type.tjp3 }
-        '2': { name: entity.name.type.tjp3 }
+        '1': { name: storage.type.account.tjp3 }
+        '2': { name: entity.name.type.account.tjp3 }
         '3': { name: string.quoted.tjp3 }
       patterns:
         - match: '^\s*(flags)\s'
           captures:
-            '1': { name: entity.name.tag.flags.tjp3 }
-    - name: meta.type.tjp3
-      match: '\s*(account)\s+(?:{{capturedID}}\s+)?{{capturedStringSingleLine}}'
+            '1': { name: storage.type.flags.tjp3 }
+    - match: '\s*(account)\s+(?:{{capturedID}}\s+)?{{capturedStringSingleLine}}'
       captures:
-        '1': { name: storage.type.tjp3 }
-        '2': { name: entity.name.type.tjp3 }
+        '1': { name: storage.type.account.tjp3 }
+        '2': { name: entity.name.type.account.tjp3 }
         '3': { name: string.quoted.tjp3 }
