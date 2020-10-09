@@ -11,6 +11,7 @@ macros:
   stringDoubleQuoted: \"(?:[^\"\\]|\\.)+\"
   stringSingleQuoted: \'(?:[^\'\\]|\\.)+\'
   stringSingleLine: (?:{{stringDoubleQuoted}}|{{stringSingleQuoted}})
+  endOfListAttribute: (?:(?<![,\s])\s*$)
 
 patterns:
 - include: '#account'
@@ -31,11 +32,9 @@ repository:
           captures:
             '1': { name: storage.type.flags.tjp3 }
         - begin: '^\s*(flags)\s'
-          end: '({{ID}})\s*$'
+          end: '{{endOfListAttribute}}'
           beginCaptures:
             '1': { name: storage.type.flags.tjp3 }
-          endCaptures:
-            '1': { name: entity.name.type.flags.tjp3 }
           patterns:
             - include: '#string'
             - match: '({{ID}})'
