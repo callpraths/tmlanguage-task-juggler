@@ -27,7 +27,7 @@
         <array>
           <dict>
             <key>begin</key>
-            <string>^\s*(account)\s+(?:((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))\s+)?((?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\'))\s*\{</string>
+            <string>^\s*(account)\b\s*(?:((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))\s+)?((?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\'))\s*\{</string>
             <key>end</key>
             <string>\}</string>
             <key>beginCaptures</key>
@@ -91,7 +91,7 @@
           </dict>
           <dict>
             <key>match</key>
-            <string>^\s*(account)\s+(?:((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))\s+)?((?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\'))</string>
+            <string>^\s*(account)\b\s*(?:((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))\s+)?((?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\'))</string>
             <key>captures</key>
             <dict>
               <key>1</key>
