@@ -31,6 +31,30 @@ flags NoLeadingSpace
   flags finalFlag
 }
 
+account "with credits" {
+  credits 2007-01-01 "date only" 1.0
+  credits 2007-01-01-23:00 "time to minutes" 1.0
+  credits 2007-01-01-23:00:01 "time to seconds" 1.0
+  credits 2007-01-01-23:00:01-+1100 "positive timezone offset to seconds" 1.0
+  credits 2007-01-01-23:00:01--1100 "negative timezone offset to seconds" 1.0
+  credits 2007-01-01-23:00-+1100 "positive timezone offset to minutes" 1.0
+  credits 2007-01-01-23:00--1100 "negative timezone offset to minutes" 1.0
+
+  credits %{ 2007-01-01 - 1 min } "time offset minutes" 1.0
+  credits %{ 2007-01-01 - 2 h } "time offset hour" 1.0
+  credits %{ 2007-01-01 - 3 d } "time offset week" 1.0
+  credits %{ 2007-01-01 - 33 w } "time offset week" 1.0
+  credits %{ 2007-01-01 - 0 m } "time offset month" 1.0
+  credits %{ 2007-01-01 - 1 y } "time offset year" 1.0
+
+  credits %{ 2007-01-01 - 1.342 y } "time offset flat" 1.0
+  credits %{2007-01-01-1m} "time offset no spaces" 1.0
+  credits %{ 2007-01-01 + 1m } "time offset positive" 1.0
+
+  credits 2007-01-01 "integral credit" 3
+  credits 2007-01-01 "floating point credit" 3.7
+}
+
 account "string wins everywhere" {
   "this is a single line string"
   'this is also a single line string'

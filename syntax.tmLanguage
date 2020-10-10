@@ -58,6 +58,10 @@
                 <key>include</key>
                 <string>#flags</string>
               </dict>
+              <dict>
+                <key>include</key>
+                <string>#credits</string>
+              </dict>
             </array>
           </dict>
           <dict>
@@ -81,18 +85,6 @@
                 <string>string.quoted.tjp3</string>
               </dict>
             </dict>
-          </dict>
-        </array>
-      </dict>
-      <key>string</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>name</key>
-            <string>string.quoted.tjp3</string>
-            <key>match</key>
-            <string>(?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\')</string>
           </dict>
         </array>
       </dict>
@@ -132,6 +124,83 @@
                 </dict>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>credits</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>begin</key>
+            <string>^\s*(credits)\b</string>
+            <key>end</key>
+            <string>(?:(?&lt;![,\s])\s*$)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.credits.tjp3</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#string</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#date</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#numeric</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>string</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>string.quoted.tjp3</string>
+            <key>match</key>
+            <string>(?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\')</string>
+          </dict>
+        </array>
+      </dict>
+      <key>numeric</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.tjp3</string>
+            <key>match</key>
+            <string>(?:(?:\d+\.\d+)|(?:\d+))</string>
+          </dict>
+        </array>
+      </dict>
+      <key>date</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.date.tjp3</string>
+            <key>match</key>
+            <string>%\s*\{\s*(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)\s*[+-]\s*(?:(?:\d+\.\d+)|(?:\d+))\s*(?:min|h|d|w|m|y)\s*\}</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.date.tjp3</string>
+            <key>match</key>
+            <string>(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)</string>
           </dict>
         </array>
       </dict>

@@ -12,6 +12,11 @@ macros:
   stringSingleQuoted: \'(?:[^\'\\]|\\.)+\'
   stringSingleLine: (?:{{stringDoubleQuoted}}|{{stringSingleQuoted}})
   endOfListAttribute: (?:(?<![,\s])\s*$)
+  timestamp: (?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)
+  float: (?:\d+\.\d+)
+  integer: (?:\d+)
+  numeric: (?:{{float}}|{{integer}})
+  durationUnits: (?:min|h|d|w|m|y)
 
 patterns:
 - include: '#account'
@@ -29,15 +34,12 @@ repository:
       patterns:
         - include: '#string'
         - include: '#flags'
+        - include: '#credits'
     - match: '^\s*(account)\b\s*(?:({{ID}})\s+)?({{stringSingleLine}})'
       captures:
         '1': { name: storage.type.account.tjp3 }
         '2': { name: entity.name.type.account.tjp3 }
         '3': { name: string.quoted.tjp3 }
-  string:
-    patterns:
-      - name: string.quoted.tjp3
-        match: '{{stringSingleLine}}'
   flags:
     patterns:
       - begin: '^\s*(flags)\b'
@@ -49,3 +51,29 @@ repository:
           - match: '({{ID}})'
             captures:
               '1': { name: entity.name.type.flags.tjp3 }
+  credits:
+    patterns:
+      - begin: '^\s*(credits)\b'
+        end: '{{endOfListAttribute}}'
+        beginCaptures:
+          '1': { name: storage.type.credits.tjp3 }
+        patterns:
+          - include: '#string'
+          - include: '#date'
+          - include: '#numeric'
+  string:
+    patterns:
+      - name: string.quoted.tjp3
+        match: '{{stringSingleLine}}'
+  numeric:
+    patterns:
+      - name: constant.numeric.tjp3
+        match: '{{numeric}}'
+  date:
+    patterns:
+      # Order matters. This pattern must precede the simpler timestamp pattern
+      # without duration offset.
+      - name: constant.numeric.date.tjp3
+        match: '%\s*\{\s*{{timestamp}}\s*[+-]\s*{{numeric}}\s*{{durationUnits}}\s*\}'
+      - name: constant.numeric.date.tjp3
+        match: '{{timestamp}}'
