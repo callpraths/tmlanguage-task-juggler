@@ -112,16 +112,10 @@
                 <string>#string</string>
               </dict>
               <dict>
+                <key>name</key>
+                <string>entity.name.type.flags.tjp3</string>
                 <key>match</key>
-                <string>((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))</string>
-                <key>captures</key>
-                <dict>
-                  <key>1</key>
-                  <dict>
-                    <key>name</key>
-                    <string>entity.name.type.flags.tjp3</string>
-                  </dict>
-                </dict>
+                <string>(?:\b[a-zA-Z_][a-zA-Z0-9_]*\b)</string>
               </dict>
             </array>
           </dict>

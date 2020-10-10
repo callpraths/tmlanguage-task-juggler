@@ -48,9 +48,8 @@ repository:
           '1': { name: storage.type.flags.tjp3 }
         patterns:
           - include: '#string'
-          - match: '({{ID}})'
-            captures:
-              '1': { name: entity.name.type.flags.tjp3 }
+          - name: entity.name.type.flags.tjp3
+            match: '{{ID}}'
   credits:
     patterns:
       - begin: '^\s*(credits)\b'
