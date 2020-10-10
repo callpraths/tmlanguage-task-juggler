@@ -62,6 +62,10 @@
                 <key>include</key>
                 <string>#credits</string>
               </dict>
+              <dict>
+                <key>include</key>
+                <string>#aggregate</string>
+              </dict>
             </array>
           </dict>
           <dict>
@@ -157,6 +161,29 @@
                 <string>#numeric</string>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>aggregate</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>match</key>
+            <string>^\s*(aggregate)\s*(resources|tasks)</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.aggregate.tjp3</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>constant.other.aggregate.tjp3</string>
+              </dict>
+            </dict>
           </dict>
         </array>
       </dict>

@@ -35,6 +35,7 @@ repository:
         - include: '#literals'
         - include: '#flags'
         - include: '#credits'
+        - include: '#aggregate'
     - match: '^\s*(account)\b\s*(?:({{ID}})\s+)?({{stringSingleLine}})'
       captures:
         '1': { name: storage.type.account.tjp3 }
@@ -61,6 +62,12 @@ repository:
           - include: '#string'
           - include: '#date'
           - include: '#numeric'
+  aggregate:
+    patterns:
+      - match: '^\s*(aggregate)\s*(resources|tasks)'
+        captures:
+          '1': { name: storage.type.aggregate.tjp3 }
+          '2': { name: constant.other.aggregate.tjp3 }
   literals:
     patterns:
       - include: '#string'

@@ -64,3 +64,8 @@ account "literals" {
   1.3
   flags 1.3
 }
+
+account "aggregate" {
+  aggregate resources
+  aggregate tasks
+}
