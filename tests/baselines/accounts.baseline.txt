@@ -57,10 +57,14 @@ account "with credits" {
   credits 2007-01-01 "floating point credit" 3.7
 }
 
-account "string wins everywhere" {
+account "literals" {
   "this is a single line string"
   'this is also a single line string'
   flags "there should be no string here", 'alas' the_flag
+  2007-01-01-23:00:01-+1100
+  flags 2007-01-01-23:00:01-+1100
+  1.3
+  flags 1.3
 }
 -----------------------------------
 
@@ -920,18 +924,18 @@ account "string wins everywhere" {
  ^
  source.tjp3
 
->account "string wins everywhere" {
+>account "literals" {
  ^^^^^^^
  source.tjp3 storage.type.account.tjp3
->account "string wins everywhere" {
+>account "literals" {
         ^
         source.tjp3
->account "string wins everywhere" {
-         ^^^^^^^^^^^^^^^^^^^^^^^^
+>account "literals" {
+         ^^^^^^^^^^
          source.tjp3 string.quoted.tjp3
->account "string wins everywhere" {
-                                 ^^
-                                 source.tjp3
+>account "literals" {
+                   ^^
+                   source.tjp3
 
 >  "this is a single line string"
  ^^
@@ -971,6 +975,46 @@ account "string wins everywhere" {
 >  flags "there should be no string here", 'alas' the_flag
                                                   ^^^^^^^^
                                                   source.tjp3 entity.name.type.flags.tjp3
+
+>  2007-01-01-23:00:01-+1100
+ ^^
+ source.tjp3
+>  2007-01-01-23:00:01-+1100
+   ^^^^^^^^^^^^^^^^^^^^^^^^^
+   source.tjp3 constant.numeric.date.tjp3
+
+>  flags 2007-01-01-23:00:01-+1100
+ ^^
+ source.tjp3
+>  flags 2007-01-01-23:00:01-+1100
+   ^^^^^
+   source.tjp3 storage.type.flags.tjp3
+>  flags 2007-01-01-23:00:01-+1100
+        ^
+        source.tjp3
+>  flags 2007-01-01-23:00:01-+1100
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 constant.numeric.date.tjp3
+
+>  1.3
+ ^^
+ source.tjp3
+>  1.3
+   ^^^
+   source.tjp3 constant.numeric.tjp3
+
+>  flags 1.3
+ ^^
+ source.tjp3
+>  flags 1.3
+   ^^^^^
+   source.tjp3 storage.type.flags.tjp3
+>  flags 1.3
+        ^
+        source.tjp3
+>  flags 1.3
+         ^^^
+         source.tjp3 constant.numeric.tjp3
 
 >}
  ^

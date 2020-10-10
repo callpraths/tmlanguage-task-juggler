@@ -55,8 +55,12 @@ account "with credits" {
   credits 2007-01-01 "floating point credit" 3.7
 }
 
-account "string wins everywhere" {
+account "literals" {
   "this is a single line string"
   'this is also a single line string'
   flags "there should be no string here", 'alas' the_flag
+  2007-01-01-23:00:01-+1100
+  flags 2007-01-01-23:00:01-+1100
+  1.3
+  flags 1.3
 }

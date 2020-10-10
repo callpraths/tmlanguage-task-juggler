@@ -32,7 +32,7 @@ repository:
         '2': { name: entity.name.type.account.tjp3 }
         '3': { name: string.quoted.tjp3 }
       patterns:
-        - include: '#string'
+        - include: '#literals'
         - include: '#flags'
         - include: '#credits'
     - match: '^\s*(account)\b\s*(?:({{ID}})\s+)?({{stringSingleLine}})'
@@ -47,7 +47,7 @@ repository:
         beginCaptures:
           '1': { name: storage.type.flags.tjp3 }
         patterns:
-          - include: '#string'
+          - include: '#literals'
           - name: entity.name.type.flags.tjp3
             match: '{{ID}}'
   credits:
@@ -57,9 +57,16 @@ repository:
         beginCaptures:
           '1': { name: storage.type.credits.tjp3 }
         patterns:
+          - include: '#literals'
           - include: '#string'
           - include: '#date'
           - include: '#numeric'
+  literals:
+    patterns:
+      - include: '#string'
+      # Order matters: date must precede subsumbed numeric
+      - include: '#date'
+      - include: '#numeric'
   string:
     patterns:
       - name: string.quoted.tjp3

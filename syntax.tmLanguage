@@ -52,7 +52,7 @@
             <array>
               <dict>
                 <key>include</key>
-                <string>#string</string>
+                <string>#literals</string>
               </dict>
               <dict>
                 <key>include</key>
@@ -109,7 +109,7 @@
             <array>
               <dict>
                 <key>include</key>
-                <string>#string</string>
+                <string>#literals</string>
               </dict>
               <dict>
                 <key>name</key>
@@ -142,6 +142,10 @@
             <array>
               <dict>
                 <key>include</key>
+                <string>#literals</string>
+              </dict>
+              <dict>
+                <key>include</key>
                 <string>#string</string>
               </dict>
               <dict>
@@ -153,6 +157,24 @@
                 <string>#numeric</string>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>literals</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#string</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#date</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#numeric</string>
           </dict>
         </array>
       </dict>
