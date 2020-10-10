@@ -69,3 +69,10 @@ account "aggregate" {
   aggregate resources
   aggregate tasks
 }
+
+account "recursive" {
+  account "flat"
+  account "deep" {
+    account deeperFlat "deeper flat"
+  }
+}

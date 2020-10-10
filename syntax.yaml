@@ -36,6 +36,7 @@ repository:
         - include: '#flags'
         - include: '#credits'
         - include: '#aggregate'
+        - include: '#account'
     - match: '^\s*(account)\b\s*(?:({{ID}})\s+)?({{stringSingleLine}})'
       captures:
         '1': { name: storage.type.account.tjp3 }

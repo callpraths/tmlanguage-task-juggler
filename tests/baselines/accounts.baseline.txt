@@ -71,6 +71,13 @@ account "aggregate" {
   aggregate resources
   aggregate tasks
 }
+
+account "recursive" {
+  account "flat"
+  account "deep" {
+    account deeperFlat "deeper flat"
+  }
+}
 -----------------------------------
 
 
@@ -1067,6 +1074,82 @@ account "aggregate" {
 >  aggregate tasks
              ^^^^^
              source.tjp3 constant.other.aggregate.tjp3
+
+>}
+ ^
+ source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>account "recursive" {
+ ^^^^^^^
+ source.tjp3 storage.type.account.tjp3
+>account "recursive" {
+        ^
+        source.tjp3
+>account "recursive" {
+         ^^^^^^^^^^^
+         source.tjp3 string.quoted.tjp3
+>account "recursive" {
+                    ^^
+                    source.tjp3
+
+>  account "flat"
+ ^^
+ source.tjp3
+>  account "flat"
+   ^^^^^^^
+   source.tjp3 storage.type.account.tjp3
+>  account "flat"
+          ^
+          source.tjp3
+>  account "flat"
+           ^^^^^^
+           source.tjp3 string.quoted.tjp3
+
+>  account "deep" {
+ ^^
+ source.tjp3
+>  account "deep" {
+   ^^^^^^^
+   source.tjp3 storage.type.account.tjp3
+>  account "deep" {
+          ^
+          source.tjp3
+>  account "deep" {
+           ^^^^^^
+           source.tjp3 string.quoted.tjp3
+>  account "deep" {
+                 ^^
+                 source.tjp3
+
+>    account deeperFlat "deeper flat"
+ ^^^^
+ source.tjp3
+>    account deeperFlat "deeper flat"
+     ^^^^^^^
+     source.tjp3 storage.type.account.tjp3
+>    account deeperFlat "deeper flat"
+            ^
+            source.tjp3
+>    account deeperFlat "deeper flat"
+             ^^^^^^^^^^
+             source.tjp3 entity.name.type.account.tjp3
+>    account deeperFlat "deeper flat"
+                       ^
+                       source.tjp3
+>    account deeperFlat "deeper flat"
+                        ^^^^^^^^^^^^^
+                        source.tjp3 string.quoted.tjp3
+
+>  }
+ ^^
+ source.tjp3
+>  }
+   ^
+   source.tjp3
 
 >}
  ^

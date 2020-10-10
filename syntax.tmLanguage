@@ -66,6 +66,10 @@
                 <key>include</key>
                 <string>#aggregate</string>
               </dict>
+              <dict>
+                <key>include</key>
+                <string>#account</string>
+              </dict>
             </array>
           </dict>
           <dict>
