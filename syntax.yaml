@@ -129,6 +129,11 @@ repository:
       - name: constant.numeric.tjp3
         match: '{{numeric}}'
 
+  replace:
+    patterns:
+      - match: 'replace'
+        name: storage.type.replace.tjp3
+
   shift:
     patterns:
     # Order matters: Multi-line pattern must preceded the single line version.
@@ -149,8 +154,17 @@ repository:
   shift-inclusions:
     patterns:
       - include: '#leaves'
+      - include: '#replace'
+      - include: '#shift'
+      - include: '#timezone'
 
   string:
     patterns:
       - name: string.quoted.tjp3
         match: '{{stringSingleLine}}'
+
+  timezone:
+    patterns:
+      - match: '(timezone)\s*{{stringSingleLine}}'
+        captures:
+          '1': { name: storage.type.timezone.tjp3 }

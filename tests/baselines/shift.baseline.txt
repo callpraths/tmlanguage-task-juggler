@@ -12,6 +12,18 @@ shift "With leaves" {
     leaves project 2011-12-24 +3d
     leaves project 2011-12-24 +3d
 }
+
+shift "simple inclusions" {
+    replace
+    timezone 'America/Los Angeles'
+}
+
+shift "recursive" {
+  shift "flat"
+  shift "deep" {
+    shift deeperFlat "deeper flat"
+  }
+}
 -----------------------------------
 
 
@@ -151,6 +163,120 @@ shift "With leaves" {
 >    leaves project 2011-12-24 +3d
                     ^^^^^^^^^^^^^^
                     source.tjp3 constant.numeric.interval.tjp3
+
+>}
+ ^
+ source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>shift "simple inclusions" {
+ ^^^^^
+ source.tjp3 storage.type.shift.tjp3
+>shift "simple inclusions" {
+      ^
+      source.tjp3
+>shift "simple inclusions" {
+       ^^^^^^^^^^^^^^^^^^^
+       source.tjp3 string.quoted.tjp3
+>shift "simple inclusions" {
+                          ^^
+                          source.tjp3
+
+>    replace
+ ^^^^
+ source.tjp3
+>    replace
+     ^^^^^^^
+     source.tjp3 storage.type.replace.tjp3
+
+>    timezone 'America/Los Angeles'
+ ^^^^
+ source.tjp3
+>    timezone 'America/Los Angeles'
+     ^^^^^^^^
+     source.tjp3 storage.type.timezone.tjp3
+>    timezone 'America/Los Angeles'
+             ^^^^^^^^^^^^^^^^^^^^^^
+             source.tjp3
+
+>}
+ ^
+ source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>shift "recursive" {
+ ^^^^^
+ source.tjp3 storage.type.shift.tjp3
+>shift "recursive" {
+      ^
+      source.tjp3
+>shift "recursive" {
+       ^^^^^^^^^^^
+       source.tjp3 string.quoted.tjp3
+>shift "recursive" {
+                  ^^
+                  source.tjp3
+
+>  shift "flat"
+ ^^
+ source.tjp3
+>  shift "flat"
+   ^^^^^
+   source.tjp3 storage.type.shift.tjp3
+>  shift "flat"
+        ^
+        source.tjp3
+>  shift "flat"
+         ^^^^^^
+         source.tjp3 string.quoted.tjp3
+
+>  shift "deep" {
+ ^^
+ source.tjp3
+>  shift "deep" {
+   ^^^^^
+   source.tjp3 storage.type.shift.tjp3
+>  shift "deep" {
+        ^
+        source.tjp3
+>  shift "deep" {
+         ^^^^^^
+         source.tjp3 string.quoted.tjp3
+>  shift "deep" {
+               ^^
+               source.tjp3
+
+>    shift deeperFlat "deeper flat"
+ ^^^^
+ source.tjp3
+>    shift deeperFlat "deeper flat"
+     ^^^^^
+     source.tjp3 storage.type.shift.tjp3
+>    shift deeperFlat "deeper flat"
+          ^
+          source.tjp3
+>    shift deeperFlat "deeper flat"
+           ^^^^^^^^^^
+           source.tjp3 entity.name.type.shift.tjp3
+>    shift deeperFlat "deeper flat"
+                     ^
+                     source.tjp3
+>    shift deeperFlat "deeper flat"
+                      ^^^^^^^^^^^^^
+                      source.tjp3 string.quoted.tjp3
+
+>  }
+ ^^
+ source.tjp3
+>  }
+   ^
+   source.tjp3
 
 >}
  ^

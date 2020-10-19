@@ -10,3 +10,15 @@ shift "With leaves" {
     leaves project 2011-12-24 +3d
     leaves project 2011-12-24 +3d
 }
+
+shift "simple inclusions" {
+    replace
+    timezone 'America/Los Angeles'
+}
+
+shift "recursive" {
+  shift "flat"
+  shift "deep" {
+    shift deeperFlat "deeper flat"
+  }
+}

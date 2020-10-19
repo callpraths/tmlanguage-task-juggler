@@ -320,6 +320,18 @@
           </dict>
         </array>
       </dict>
+      <key>replace</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>match</key>
+            <string>replace</string>
+            <key>name</key>
+            <string>storage.type.replace.tjp3</string>
+          </dict>
+        </array>
+      </dict>
       <key>shift</key>
       <dict>
         <key>patterns</key>
@@ -387,6 +399,18 @@
             <key>include</key>
             <string>#leaves</string>
           </dict>
+          <dict>
+            <key>include</key>
+            <string>#replace</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#shift</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#timezone</string>
+          </dict>
         </array>
       </dict>
       <key>string</key>
@@ -398,6 +422,24 @@
             <string>string.quoted.tjp3</string>
             <key>match</key>
             <string>(?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\')</string>
+          </dict>
+        </array>
+      </dict>
+      <key>timezone</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>match</key>
+            <string>(timezone)\s*(?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\')</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.timezone.tjp3</string>
+              </dict>
+            </dict>
           </dict>
         </array>
       </dict>
