@@ -4,3 +4,9 @@ shift 9invalidID ""
 shift invalid*ID ""
 shiftMustBeFirstOnLine shift "No ID"
 shift "Empty Body" {}
+
+shift "With leaves" {
+    leaves project 2011-12-24 +3d
+    leaves project 2011-12-24 +3d
+    leaves project 2011-12-24 +3d
+}

@@ -138,11 +138,17 @@ repository:
         '1': { name: storage.type.shift.tjp3 }
         '2': { name: entity.name.type.shift.tjp3 }
         '3': { name: string.quoted.tjp3 }
+      patterns:
+        - include: '#shift-inclusions'
     - match: '^\s*(shift)\b\s*(?:({{ID}})\s+)?({{stringSingleLine}})'
       captures:
         '1': { name: storage.type.shift.tjp3 }
         '2': { name: entity.name.type.shift.tjp3 }
         '3': { name: string.quoted.tjp3 }
+
+  shift-inclusions:
+    patterns:
+      - include: '#leaves'
 
   string:
     patterns:

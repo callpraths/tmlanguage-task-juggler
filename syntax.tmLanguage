@@ -347,6 +347,13 @@
                 <string>string.quoted.tjp3</string>
               </dict>
             </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#shift-inclusions</string>
+              </dict>
+            </array>
           </dict>
           <dict>
             <key>match</key>
@@ -369,6 +376,16 @@
                 <string>string.quoted.tjp3</string>
               </dict>
             </dict>
+          </dict>
+        </array>
+      </dict>
+      <key>shift-inclusions</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#leaves</string>
           </dict>
         </array>
       </dict>

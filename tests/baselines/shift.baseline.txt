@@ -6,6 +6,12 @@ shift 9invalidID ""
 shift invalid*ID ""
 shiftMustBeFirstOnLine shift "No ID"
 shift "Empty Body" {}
+
+shift "With leaves" {
+    leaves project 2011-12-24 +3d
+    leaves project 2011-12-24 +3d
+    leaves project 2011-12-24 +3d
+}
 -----------------------------------
 
 
@@ -71,3 +77,81 @@ shift "Empty Body" {}
 >shift "Empty Body" {}
                      ^
                      source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>shift "With leaves" {
+ ^^^^^
+ source.tjp3 storage.type.shift.tjp3
+>shift "With leaves" {
+      ^
+      source.tjp3
+>shift "With leaves" {
+       ^^^^^^^^^^^^^
+       source.tjp3 string.quoted.tjp3
+>shift "With leaves" {
+                    ^^
+                    source.tjp3
+
+>    leaves project 2011-12-24 +3d
+ ^^^^
+ source.tjp3
+>    leaves project 2011-12-24 +3d
+     ^^^^^^
+     source.tjp3 storage.type.leaves.tjp3
+>    leaves project 2011-12-24 +3d
+           ^
+           source.tjp3
+>    leaves project 2011-12-24 +3d
+            ^^^^^^^
+            source.tjp3 constant.language.leaves.tjp3
+>    leaves project 2011-12-24 +3d
+                   ^
+                   source.tjp3
+>    leaves project 2011-12-24 +3d
+                    ^^^^^^^^^^^^^^
+                    source.tjp3 constant.numeric.interval.tjp3
+
+>    leaves project 2011-12-24 +3d
+ ^^^^
+ source.tjp3
+>    leaves project 2011-12-24 +3d
+     ^^^^^^
+     source.tjp3 storage.type.leaves.tjp3
+>    leaves project 2011-12-24 +3d
+           ^
+           source.tjp3
+>    leaves project 2011-12-24 +3d
+            ^^^^^^^
+            source.tjp3 constant.language.leaves.tjp3
+>    leaves project 2011-12-24 +3d
+                   ^
+                   source.tjp3
+>    leaves project 2011-12-24 +3d
+                    ^^^^^^^^^^^^^^
+                    source.tjp3 constant.numeric.interval.tjp3
+
+>    leaves project 2011-12-24 +3d
+ ^^^^
+ source.tjp3
+>    leaves project 2011-12-24 +3d
+     ^^^^^^
+     source.tjp3 storage.type.leaves.tjp3
+>    leaves project 2011-12-24 +3d
+           ^
+           source.tjp3
+>    leaves project 2011-12-24 +3d
+            ^^^^^^^
+            source.tjp3 constant.language.leaves.tjp3
+>    leaves project 2011-12-24 +3d
+                   ^
+                   source.tjp3
+>    leaves project 2011-12-24 +3d
+                    ^^^^^^^^^^^^^^
+                    source.tjp3 constant.numeric.interval.tjp3
+
+>}
+ ^
+ source.tjp3
