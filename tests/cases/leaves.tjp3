@@ -1,0 +1,22 @@
+leaves project withName 2011-12-24
+leaves project 2011-12-24
+leaves project first 2011-12-24, 2011-12-24,
+  third 2011-12-24
+
+// Various forms of intervals
+
+leaves project 2011-12-24 +3d
+leaves project 2011-12-24 + 3 w
+leaves project 2007-01-01-23:00:01-+1100 +3d
+leaves project %{ 2007-01-01 - 1 min } +11y
+
+leaves project 2011-12-24 - 2011-12-25
+leaves project 2011-12-24-2011-12-25
+leaves project 2007-01-01-23:00 - 2011-12-25
+leaves project 2007-01-01-23:00 - 2011-12-25-23:00
+leaves project 2007-01-01-23:00:01-+1100 - 2011-12-25-23:00
+leaves project %{ 2007-01-01 - 1 min } - 2011-12-25
+leaves project %{ 2007-01-01 - 1 min } - %{ 2007-01-01 - 1 min }
+
+// implicit
+leaves project 2011-12-24

@@ -16,12 +16,19 @@ macros:
   integer: (?:\d+)
   numeric: (?:{{float}}|{{integer}})
   durationUnits: (?:min|h|d|w|m|y)
+  durationOffset: (?:[+-]\s*{{numeric}}\s*{{durationUnits}})
   timestampWithoutOffset: (?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)
-  timestampWithOffset: (?:%\s*\{\s*{{timestampWithoutOffset}}\s*[+-]\s*{{numeric}}\s*{{durationUnits}}\s*\})
+  timestampWithOffset: (?:%\s*\{\s*{{timestampWithoutOffset}}\s*{{durationOffset}}\s*\})
   timestamp: (?:{{timestampWithoutOffset}}|{{timestampWithOffset}})
+  positiveDurationOffset: (?:\+\s*{{numeric}}\s*{{durationUnits}})
+  intervalRange: (?:\-\s*{{timestamp}}|{{positiveDurationOffset}})
+  explicitInteral: (?:{{timestamp}}\s*{{intervalRange}})
+  interval: (?:{{explicitInteral}}|{{timestamp}})
+
 
 patterns:
 - include: '#account'
+- include: '#leaves'
 - include: '#literals'
 - include: '#shift'
 
@@ -90,10 +97,30 @@ repository:
           - name: entity.name.type.flags.tjp3
             match: '{{ID}}'
 
+  leaves:
+    patterns:
+      - begin: '^\s*(leaves)\b'
+        end: '{{endOfListAttribute}}'
+        beginCaptures:
+          '1': { name: storage.type.leaves.tjp3 }
+        patterns:
+          - include: '#leaves-inclusions'
+
+  leaves-inclusions:
+    patterns:
+      - match: '(?:project|annual|special|sick|unpaid|holiday|unemployed)'
+        name: constant.language.leaves.tjp3
+      - match: '{{ID}}'
+        name: entity.name.type.leaves.tjp3
+      - match: '{{interval}}'
+        name: constant.numeric.interval.tjp3
+      - include: '#literals'
+
   literals:
     patterns:
       - include: '#string'
       # Order matters: date must precede subsumbed numeric
+      # TODO(move intervals to literals)
       - include: '#date'
       - include: '#numeric'
 

@@ -1,0 +1,324 @@
+original file
+-----------------------------------
+leaves project withName 2011-12-24
+leaves project 2011-12-24
+leaves project first 2011-12-24, 2011-12-24,
+  third 2011-12-24
+
+// Various forms of intervals
+
+leaves project 2011-12-24 +3d
+leaves project 2011-12-24 + 3 w
+leaves project 2007-01-01-23:00:01-+1100 +3d
+leaves project %{ 2007-01-01 - 1 min } +11y
+
+leaves project 2011-12-24 - 2011-12-25
+leaves project 2011-12-24-2011-12-25
+leaves project 2007-01-01-23:00 - 2011-12-25
+leaves project 2007-01-01-23:00 - 2011-12-25-23:00
+leaves project 2007-01-01-23:00:01-+1100 - 2011-12-25-23:00
+leaves project %{ 2007-01-01 - 1 min } - 2011-12-25
+leaves project %{ 2007-01-01 - 1 min } - %{ 2007-01-01 - 1 min }
+
+// implicit
+leaves project 2011-12-24
+-----------------------------------
+
+
+>leaves project withName 2011-12-24
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project withName 2011-12-24
+       ^
+       source.tjp3
+>leaves project withName 2011-12-24
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project withName 2011-12-24
+               ^
+               source.tjp3
+>leaves project withName 2011-12-24
+                ^^^^^^^^
+                source.tjp3 entity.name.type.leaves.tjp3
+>leaves project withName 2011-12-24
+                        ^
+                        source.tjp3
+>leaves project withName 2011-12-24
+                         ^^^^^^^^^^
+                         source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project 2011-12-24
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2011-12-24
+       ^
+       source.tjp3
+>leaves project 2011-12-24
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2011-12-24
+               ^
+               source.tjp3
+>leaves project 2011-12-24
+                ^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project first 2011-12-24, 2011-12-24,
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+       ^
+       source.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+               ^
+               source.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+                ^^^^^
+                source.tjp3 entity.name.type.leaves.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+                     ^
+                     source.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+                      ^^^^^^^^^^
+                      source.tjp3 constant.numeric.interval.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+                                ^^
+                                source.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+                                  ^^^^^^^^^^
+                                  source.tjp3 constant.numeric.interval.tjp3
+>leaves project first 2011-12-24, 2011-12-24,
+                                            ^^
+                                            source.tjp3
+
+>  third 2011-12-24
+ ^^
+ source.tjp3
+>  third 2011-12-24
+   ^^^^^
+   source.tjp3 entity.name.type.leaves.tjp3
+>  third 2011-12-24
+        ^
+        source.tjp3
+>  third 2011-12-24
+         ^^^^^^^^^^
+         source.tjp3 constant.numeric.interval.tjp3
+
+>
+ ^
+ source.tjp3
+
+>// Various forms of intervals
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>leaves project 2011-12-24 +3d
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2011-12-24 +3d
+       ^
+       source.tjp3
+>leaves project 2011-12-24 +3d
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2011-12-24 +3d
+               ^
+               source.tjp3
+>leaves project 2011-12-24 +3d
+                ^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project 2011-12-24 + 3 w
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2011-12-24 + 3 w
+       ^
+       source.tjp3
+>leaves project 2011-12-24 + 3 w
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2011-12-24 + 3 w
+               ^
+               source.tjp3
+>leaves project 2011-12-24 + 3 w
+                ^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project 2007-01-01-23:00:01-+1100 +3d
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2007-01-01-23:00:01-+1100 +3d
+       ^
+       source.tjp3
+>leaves project 2007-01-01-23:00:01-+1100 +3d
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2007-01-01-23:00:01-+1100 +3d
+               ^
+               source.tjp3
+>leaves project 2007-01-01-23:00:01-+1100 +3d
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project %{ 2007-01-01 - 1 min } +11y
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project %{ 2007-01-01 - 1 min } +11y
+       ^
+       source.tjp3
+>leaves project %{ 2007-01-01 - 1 min } +11y
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project %{ 2007-01-01 - 1 min } +11y
+               ^
+               source.tjp3
+>leaves project %{ 2007-01-01 - 1 min } +11y
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>
+ ^
+ source.tjp3
+
+>leaves project 2011-12-24 - 2011-12-25
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2011-12-24 - 2011-12-25
+       ^
+       source.tjp3
+>leaves project 2011-12-24 - 2011-12-25
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2011-12-24 - 2011-12-25
+               ^
+               source.tjp3
+>leaves project 2011-12-24 - 2011-12-25
+                ^^^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project 2011-12-24-2011-12-25
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2011-12-24-2011-12-25
+       ^
+       source.tjp3
+>leaves project 2011-12-24-2011-12-25
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2011-12-24-2011-12-25
+               ^
+               source.tjp3
+>leaves project 2011-12-24-2011-12-25
+                ^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project 2007-01-01-23:00 - 2011-12-25
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2007-01-01-23:00 - 2011-12-25
+       ^
+       source.tjp3
+>leaves project 2007-01-01-23:00 - 2011-12-25
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2007-01-01-23:00 - 2011-12-25
+               ^
+               source.tjp3
+>leaves project 2007-01-01-23:00 - 2011-12-25
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project 2007-01-01-23:00 - 2011-12-25-23:00
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2007-01-01-23:00 - 2011-12-25-23:00
+       ^
+       source.tjp3
+>leaves project 2007-01-01-23:00 - 2011-12-25-23:00
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2007-01-01-23:00 - 2011-12-25-23:00
+               ^
+               source.tjp3
+>leaves project 2007-01-01-23:00 - 2011-12-25-23:00
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project 2007-01-01-23:00:01-+1100 - 2011-12-25-23:00
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2007-01-01-23:00:01-+1100 - 2011-12-25-23:00
+       ^
+       source.tjp3
+>leaves project 2007-01-01-23:00:01-+1100 - 2011-12-25-23:00
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2007-01-01-23:00:01-+1100 - 2011-12-25-23:00
+               ^
+               source.tjp3
+>leaves project 2007-01-01-23:00:01-+1100 - 2011-12-25-23:00
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project %{ 2007-01-01 - 1 min } - 2011-12-25
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project %{ 2007-01-01 - 1 min } - 2011-12-25
+       ^
+       source.tjp3
+>leaves project %{ 2007-01-01 - 1 min } - 2011-12-25
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project %{ 2007-01-01 - 1 min } - 2011-12-25
+               ^
+               source.tjp3
+>leaves project %{ 2007-01-01 - 1 min } - 2011-12-25
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>leaves project %{ 2007-01-01 - 1 min } - %{ 2007-01-01 - 1 min }
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project %{ 2007-01-01 - 1 min } - %{ 2007-01-01 - 1 min }
+       ^
+       source.tjp3
+>leaves project %{ 2007-01-01 - 1 min } - %{ 2007-01-01 - 1 min }
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project %{ 2007-01-01 - 1 min } - %{ 2007-01-01 - 1 min }
+               ^
+               source.tjp3
+>leaves project %{ 2007-01-01 - 1 min } - %{ 2007-01-01 - 1 min }
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
+
+>
+ ^
+ source.tjp3
+
+>// implicit
+ ^^^^^^^^^^^^
+ source.tjp3
+
+>leaves project 2011-12-24
+ ^^^^^^
+ source.tjp3 storage.type.leaves.tjp3
+>leaves project 2011-12-24
+       ^
+       source.tjp3
+>leaves project 2011-12-24
+        ^^^^^^^
+        source.tjp3 constant.language.leaves.tjp3
+>leaves project 2011-12-24
+               ^
+               source.tjp3
+>leaves project 2011-12-24
+                ^^^^^^^^^^
+                source.tjp3 constant.numeric.interval.tjp3
