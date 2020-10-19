@@ -3,16 +3,6 @@ account has_id "No attributes"
 account 9invalidID ""
 account invalid*ID ""
 
-account escapeDoubleQuotes "\""
-account escapeSomethingElseInDoubleQuotes "\n"
-account earlyTerminationOfDoubleQuotes "included"excluded"
-account singleQuotesInDoubleQuotes "all'included"
-
-account escapeSingleQuotes '\''
-account escapeSomethingElseInSingleQuotes '\n'
-account earlyTerminationOfSingleQuotes 'included'excluded'
-account DoubleQuotesInSingleQuotes 'all"included'
-
 accountMustBeFirstOnLine account "No ID"
 
 account "Empty Body" {}
@@ -53,16 +43,6 @@ account "with credits" {
 
   credits 2007-01-01 "integral credit" 3
   credits 2007-01-01 "floating point credit" 3.7
-}
-
-account "literals" {
-  "this is a single line string"
-  'this is also a single line string'
-  flags "there should be no string here", 'alas' the_flag
-  2007-01-01-23:00:01-+1100
-  flags 2007-01-01-23:00:01-+1100
-  1.3
-  flags 1.3
 }
 
 account "aggregate" {

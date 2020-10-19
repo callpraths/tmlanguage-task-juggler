@@ -5,16 +5,6 @@ account has_id "No attributes"
 account 9invalidID ""
 account invalid*ID ""
 
-account escapeDoubleQuotes "\""
-account escapeSomethingElseInDoubleQuotes "\n"
-account earlyTerminationOfDoubleQuotes "included"excluded"
-account singleQuotesInDoubleQuotes "all'included"
-
-account escapeSingleQuotes '\''
-account escapeSomethingElseInSingleQuotes '\n'
-account earlyTerminationOfSingleQuotes 'included'excluded'
-account DoubleQuotesInSingleQuotes 'all"included'
-
 accountMustBeFirstOnLine account "No ID"
 
 account "Empty Body" {}
@@ -55,16 +45,6 @@ account "with credits" {
 
   credits 2007-01-01 "integral credit" 3
   credits 2007-01-01 "floating point credit" 3.7
-}
-
-account "literals" {
-  "this is a single line string"
-  'this is also a single line string'
-  flags "there should be no string here", 'alas' the_flag
-  2007-01-01-23:00:01-+1100
-  flags 2007-01-01-23:00:01-+1100
-  1.3
-  flags 1.3
 }
 
 account "aggregate" {
@@ -108,8 +88,14 @@ account "recursive" {
                 source.tjp3 string.quoted.tjp3
 
 >account 9invalidID ""
- ^^^^^^^^^^^^^^^^^^^^^^
+ ^^^^^^^^
  source.tjp3
+>account 9invalidID ""
+         ^
+         source.tjp3 constant.numeric.tjp3
+>account 9invalidID ""
+          ^^^^^^^^^^^^^
+          source.tjp3
 
 >account invalid*ID ""
  ^^^^^^^^^^^^^^^^^^^^^^
@@ -119,151 +105,12 @@ account "recursive" {
  ^
  source.tjp3
 
->account escapeDoubleQuotes "\""
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account escapeDoubleQuotes "\""
-        ^
-        source.tjp3
->account escapeDoubleQuotes "\""
-         ^^^^^^^^^^^^^^^^^^
-         source.tjp3 entity.name.type.account.tjp3
->account escapeDoubleQuotes "\""
-                           ^
-                           source.tjp3
->account escapeDoubleQuotes "\""
-                            ^^^^
-                            source.tjp3 string.quoted.tjp3
-
->account escapeSomethingElseInDoubleQuotes "\n"
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account escapeSomethingElseInDoubleQuotes "\n"
-        ^
-        source.tjp3
->account escapeSomethingElseInDoubleQuotes "\n"
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 entity.name.type.account.tjp3
->account escapeSomethingElseInDoubleQuotes "\n"
-                                          ^
-                                          source.tjp3
->account escapeSomethingElseInDoubleQuotes "\n"
-                                           ^^^^
-                                           source.tjp3 string.quoted.tjp3
-
->account earlyTerminationOfDoubleQuotes "included"excluded"
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account earlyTerminationOfDoubleQuotes "included"excluded"
-        ^
-        source.tjp3
->account earlyTerminationOfDoubleQuotes "included"excluded"
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 entity.name.type.account.tjp3
->account earlyTerminationOfDoubleQuotes "included"excluded"
-                                       ^
-                                       source.tjp3
->account earlyTerminationOfDoubleQuotes "included"excluded"
-                                        ^^^^^^^^^^
-                                        source.tjp3 string.quoted.tjp3
->account earlyTerminationOfDoubleQuotes "included"excluded"
-                                                  ^^^^^^^^^^
-                                                  source.tjp3
-
->account singleQuotesInDoubleQuotes "all'included"
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account singleQuotesInDoubleQuotes "all'included"
-        ^
-        source.tjp3
->account singleQuotesInDoubleQuotes "all'included"
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 entity.name.type.account.tjp3
->account singleQuotesInDoubleQuotes "all'included"
-                                   ^
-                                   source.tjp3
->account singleQuotesInDoubleQuotes "all'included"
-                                    ^^^^^^^^^^^^^^
-                                    source.tjp3 string.quoted.tjp3
-
->
- ^
- source.tjp3
-
->account escapeSingleQuotes '\''
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account escapeSingleQuotes '\''
-        ^
-        source.tjp3
->account escapeSingleQuotes '\''
-         ^^^^^^^^^^^^^^^^^^
-         source.tjp3 entity.name.type.account.tjp3
->account escapeSingleQuotes '\''
-                           ^
-                           source.tjp3
->account escapeSingleQuotes '\''
-                            ^^^^
-                            source.tjp3 string.quoted.tjp3
-
->account escapeSomethingElseInSingleQuotes '\n'
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account escapeSomethingElseInSingleQuotes '\n'
-        ^
-        source.tjp3
->account escapeSomethingElseInSingleQuotes '\n'
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 entity.name.type.account.tjp3
->account escapeSomethingElseInSingleQuotes '\n'
-                                          ^
-                                          source.tjp3
->account escapeSomethingElseInSingleQuotes '\n'
-                                           ^^^^
-                                           source.tjp3 string.quoted.tjp3
-
->account earlyTerminationOfSingleQuotes 'included'excluded'
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account earlyTerminationOfSingleQuotes 'included'excluded'
-        ^
-        source.tjp3
->account earlyTerminationOfSingleQuotes 'included'excluded'
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 entity.name.type.account.tjp3
->account earlyTerminationOfSingleQuotes 'included'excluded'
-                                       ^
-                                       source.tjp3
->account earlyTerminationOfSingleQuotes 'included'excluded'
-                                        ^^^^^^^^^^
-                                        source.tjp3 string.quoted.tjp3
->account earlyTerminationOfSingleQuotes 'included'excluded'
-                                                  ^^^^^^^^^^
-                                                  source.tjp3
-
->account DoubleQuotesInSingleQuotes 'all"included'
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account DoubleQuotesInSingleQuotes 'all"included'
-        ^
-        source.tjp3
->account DoubleQuotesInSingleQuotes 'all"included'
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 entity.name.type.account.tjp3
->account DoubleQuotesInSingleQuotes 'all"included'
-                                   ^
-                                   source.tjp3
->account DoubleQuotesInSingleQuotes 'all"included'
-                                    ^^^^^^^^^^^^^^
-                                    source.tjp3 string.quoted.tjp3
-
->
- ^
- source.tjp3
-
 >accountMustBeFirstOnLine account "No ID"
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  source.tjp3
+>accountMustBeFirstOnLine account "No ID"
+                                  ^^^^^^^
+                                  source.tjp3 string.quoted.tjp3
 
 >
  ^
@@ -927,106 +774,6 @@ account "recursive" {
 >  credits 2007-01-01 "floating point credit" 3.7
                                               ^^^
                                               source.tjp3 constant.numeric.tjp3
-
->}
- ^
- source.tjp3
-
->
- ^
- source.tjp3
-
->account "literals" {
- ^^^^^^^
- source.tjp3 storage.type.account.tjp3
->account "literals" {
-        ^
-        source.tjp3
->account "literals" {
-         ^^^^^^^^^^
-         source.tjp3 string.quoted.tjp3
->account "literals" {
-                   ^^
-                   source.tjp3
-
->  "this is a single line string"
- ^^
- source.tjp3
->  "this is a single line string"
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   source.tjp3 string.quoted.tjp3
-
->  'this is also a single line string'
- ^^
- source.tjp3
->  'this is also a single line string'
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   source.tjp3 string.quoted.tjp3
-
->  flags "there should be no string here", 'alas' the_flag
- ^^
- source.tjp3
->  flags "there should be no string here", 'alas' the_flag
-   ^^^^^
-   source.tjp3 storage.type.flags.tjp3
->  flags "there should be no string here", 'alas' the_flag
-        ^
-        source.tjp3
->  flags "there should be no string here", 'alas' the_flag
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 string.quoted.tjp3
->  flags "there should be no string here", 'alas' the_flag
-                                         ^^
-                                         source.tjp3
->  flags "there should be no string here", 'alas' the_flag
-                                           ^^^^^^
-                                           source.tjp3 string.quoted.tjp3
->  flags "there should be no string here", 'alas' the_flag
-                                                 ^
-                                                 source.tjp3
->  flags "there should be no string here", 'alas' the_flag
-                                                  ^^^^^^^^
-                                                  source.tjp3 entity.name.type.flags.tjp3
-
->  2007-01-01-23:00:01-+1100
- ^^
- source.tjp3
->  2007-01-01-23:00:01-+1100
-   ^^^^^^^^^^^^^^^^^^^^^^^^^
-   source.tjp3 constant.numeric.date.tjp3
-
->  flags 2007-01-01-23:00:01-+1100
- ^^
- source.tjp3
->  flags 2007-01-01-23:00:01-+1100
-   ^^^^^
-   source.tjp3 storage.type.flags.tjp3
->  flags 2007-01-01-23:00:01-+1100
-        ^
-        source.tjp3
->  flags 2007-01-01-23:00:01-+1100
-         ^^^^^^^^^^^^^^^^^^^^^^^^^
-         source.tjp3 constant.numeric.date.tjp3
-
->  1.3
- ^^
- source.tjp3
->  1.3
-   ^^^
-   source.tjp3 constant.numeric.tjp3
-
->  flags 1.3
- ^^
- source.tjp3
->  flags 1.3
-   ^^^^^
-   source.tjp3 storage.type.flags.tjp3
->  flags 1.3
-        ^
-        source.tjp3
->  flags 1.3
-         ^^^
-         source.tjp3 constant.numeric.tjp3
 
 >}
  ^

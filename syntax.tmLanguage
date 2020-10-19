@@ -18,6 +18,10 @@
         <key>include</key>
         <string>#account</string>
       </dict>
+      <dict>
+        <key>include</key>
+        <string>#literals</string>
+      </dict>
     </array>
     <key>repository</key>
     <dict>
