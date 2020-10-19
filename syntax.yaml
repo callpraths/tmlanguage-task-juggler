@@ -21,6 +21,7 @@ macros:
 patterns:
 - include: '#account'
 - include: '#literals'
+- include: '#shift'
 
 repository:
   account:
@@ -102,6 +103,21 @@ repository:
     patterns:
       - name: constant.numeric.tjp3
         match: '{{numeric}}'
+
+  shift:
+    patterns:
+    # Order matters: Multi-line pattern must preceded the single line version.
+    - begin: '^\s*(shift)\b\s*(?:({{ID}})\s+)?({{stringSingleLine}})\s*\{'
+      end: '\}'
+      beginCaptures:
+        '1': { name: storage.type.shift.tjp3 }
+        '2': { name: entity.name.type.shift.tjp3 }
+        '3': { name: string.quoted.tjp3 }
+    - match: '^\s*(shift)\b\s*(?:({{ID}})\s+)?({{stringSingleLine}})'
+      captures:
+        '1': { name: storage.type.shift.tjp3 }
+        '2': { name: entity.name.type.shift.tjp3 }
+        '3': { name: string.quoted.tjp3 }
 
   string:
     patterns:

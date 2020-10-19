@@ -1,0 +1,6 @@
+shift "No ID"
+shift has_id "No attributes"
+shift 9invalidID ""
+shift invalid*ID ""
+shiftMustBeFirstOnLine shift "No ID"
+shift "Empty Body" {}

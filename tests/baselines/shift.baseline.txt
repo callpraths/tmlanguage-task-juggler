@@ -1,0 +1,73 @@
+original file
+-----------------------------------
+shift "No ID"
+shift has_id "No attributes"
+shift 9invalidID ""
+shift invalid*ID ""
+shiftMustBeFirstOnLine shift "No ID"
+shift "Empty Body" {}
+-----------------------------------
+
+
+>shift "No ID"
+ ^^^^^
+ source.tjp3 storage.type.shift.tjp3
+>shift "No ID"
+      ^
+      source.tjp3
+>shift "No ID"
+       ^^^^^^^
+       source.tjp3 string.quoted.tjp3
+
+>shift has_id "No attributes"
+ ^^^^^
+ source.tjp3 storage.type.shift.tjp3
+>shift has_id "No attributes"
+      ^
+      source.tjp3
+>shift has_id "No attributes"
+       ^^^^^^
+       source.tjp3 entity.name.type.shift.tjp3
+>shift has_id "No attributes"
+             ^
+             source.tjp3
+>shift has_id "No attributes"
+              ^^^^^^^^^^^^^^^
+              source.tjp3 string.quoted.tjp3
+
+>shift 9invalidID ""
+ ^^^^^^
+ source.tjp3
+>shift 9invalidID ""
+       ^
+       source.tjp3 constant.numeric.tjp3
+>shift 9invalidID ""
+        ^^^^^^^^^^^^^
+        source.tjp3
+
+>shift invalid*ID ""
+ ^^^^^^^^^^^^^^^^^^^^
+ source.tjp3
+
+>shiftMustBeFirstOnLine shift "No ID"
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ source.tjp3
+>shiftMustBeFirstOnLine shift "No ID"
+                              ^^^^^^^
+                              source.tjp3 string.quoted.tjp3
+
+>shift "Empty Body" {}
+ ^^^^^
+ source.tjp3 storage.type.shift.tjp3
+>shift "Empty Body" {}
+      ^
+      source.tjp3
+>shift "Empty Body" {}
+       ^^^^^^^^^^^^
+       source.tjp3 string.quoted.tjp3
+>shift "Empty Body" {}
+                   ^^
+                   source.tjp3
+>shift "Empty Body" {}
+                     ^
+                     source.tjp3

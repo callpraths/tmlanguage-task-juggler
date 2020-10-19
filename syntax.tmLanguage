@@ -22,6 +22,10 @@
         <key>include</key>
         <string>#literals</string>
       </dict>
+      <dict>
+        <key>include</key>
+        <string>#shift</string>
+      </dict>
     </array>
     <key>repository</key>
     <dict>
@@ -260,6 +264,58 @@
             <string>constant.numeric.tjp3</string>
             <key>match</key>
             <string>(?:(?:\d+\.\d+)|(?:\d+))</string>
+          </dict>
+        </array>
+      </dict>
+      <key>shift</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>begin</key>
+            <string>^\s*(shift)\b\s*(?:((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))\s+)?((?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\'))\s*\{</string>
+            <key>end</key>
+            <string>\}</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.shift.tjp3</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>entity.name.type.shift.tjp3</string>
+              </dict>
+              <key>3</key>
+              <dict>
+                <key>name</key>
+                <string>string.quoted.tjp3</string>
+              </dict>
+            </dict>
+          </dict>
+          <dict>
+            <key>match</key>
+            <string>^\s*(shift)\b\s*(?:((?:\b[a-zA-Z_][a-zA-Z0-9_]*\b))\s+)?((?:\"(?:[^\"\\]|\\.)+\"|\'(?:[^\'\\]|\\.)+\'))</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.shift.tjp3</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>entity.name.type.shift.tjp3</string>
+              </dict>
+              <key>3</key>
+              <dict>
+                <key>name</key>
+                <string>string.quoted.tjp3</string>
+              </dict>
+            </dict>
           </dict>
         </array>
       </dict>
