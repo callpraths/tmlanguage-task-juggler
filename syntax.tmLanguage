@@ -194,13 +194,7 @@
             <key>name</key>
             <string>constant.numeric.date.tjp3</string>
             <key>match</key>
-            <string>%\s*\{\s*(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)\s*[+-]\s*(?:(?:\d+\.\d+)|(?:\d+))\s*(?:min|h|d|w|m|y)\s*\}</string>
-          </dict>
-          <dict>
-            <key>name</key>
-            <string>constant.numeric.date.tjp3</string>
-            <key>match</key>
-            <string>(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)</string>
+            <string>(?:(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)|(?:%\s*\{\s*(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)\s*[+-]\s*(?:(?:\d+\.\d+)|(?:\d+))\s*(?:min|h|d|w|m|y)\s*\}))</string>
           </dict>
         </array>
       </dict>

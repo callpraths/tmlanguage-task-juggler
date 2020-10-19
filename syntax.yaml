@@ -12,11 +12,13 @@ macros:
   stringSingleQuoted: \'(?:[^\'\\]|\\.)+\'
   stringSingleLine: (?:{{stringDoubleQuoted}}|{{stringSingleQuoted}})
   endOfListAttribute: (?:(?<![,\s])\s*$)
-  timestamp: (?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)
   float: (?:\d+\.\d+)
   integer: (?:\d+)
   numeric: (?:{{float}}|{{integer}})
   durationUnits: (?:min|h|d|w|m|y)
+  timestampWithoutOffset: (?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)
+  timestampWithOffset: (?:%\s*\{\s*{{timestampWithoutOffset}}\s*[+-]\s*{{numeric}}\s*{{durationUnits}}\s*\})
+  timestamp: (?:{{timestampWithoutOffset}}|{{timestampWithOffset}})
 
 patterns:
 - include: '#account'
@@ -74,10 +76,6 @@ repository:
 
   date:
     patterns:
-      # Order matters. This pattern must precede the simpler timestamp pattern
-      # without duration offset.
-      - name: constant.numeric.date.tjp3
-        match: '%\s*\{\s*{{timestamp}}\s*[+-]\s*{{numeric}}\s*{{durationUnits}}\s*\}'
       - name: constant.numeric.date.tjp3
         match: '{{timestamp}}'
 
