@@ -1,0 +1,49 @@
+original file
+-----------------------------------
+account "with multiple flags on a line" {
+    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+}
+-----------------------------------
+
+
+>account "with multiple flags on a line" {
+ ^^^^^^^
+ source.tjp3 storage.type.account.tjp3
+>account "with multiple flags on a line" {
+        ^
+        source.tjp3
+>account "with multiple flags on a line" {
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         source.tjp3 string.quoted.tjp3
+>account "with multiple flags on a line" {
+                                        ^^
+                                        source.tjp3
+
+>    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+ ^^^^
+ source.tjp3
+>    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+     ^^^^^
+     source.tjp3 storage.type.flags.tjp3
+>    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+          ^
+          source.tjp3
+>    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+           ^^^^^^^^
+           source.tjp3 entity.name.type.flags.tjp3
+>    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+                   ^
+                   source.tjp3
+>    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+                    ^^^^^
+                    source.tjp3 entity.name.type.flags.tjp3
+>    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+                         ^
+                         source.tjp3
+>    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          source.tjp3 entity.name.type.flags.tjp3
+
+>}
+ ^
+ source.tjp3

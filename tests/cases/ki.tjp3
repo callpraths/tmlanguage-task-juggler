@@ -1,0 +1,3 @@
+account "with multiple flags on a line" {
+    flags realFlag flags thePreceedingFlagsTokenIsIncorrectDetectedAsAName
+}
