@@ -18,6 +18,12 @@ shift "simple inclusions" {
     timezone 'America/Los Angeles'
 }
 
+shift "with vacation" {
+  vacation oneDayOff 2011-12-24 +3d
+  vacation 2011-12-24 +3d
+  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+}
+
 shift "recursive" {
   shift "flat"
   shift "deep" {
@@ -201,6 +207,90 @@ shift "recursive" {
 >    timezone 'America/Los Angeles'
              ^^^^^^^^^^^^^^^^^^^^^^
              source.tjp3
+
+>}
+ ^
+ source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>shift "with vacation" {
+ ^^^^^
+ source.tjp3 storage.type.shift.tjp3
+>shift "with vacation" {
+      ^
+      source.tjp3
+>shift "with vacation" {
+       ^^^^^^^^^^^^^^^
+       source.tjp3 string.quoted.tjp3
+>shift "with vacation" {
+                      ^^
+                      source.tjp3
+
+>  vacation oneDayOff 2011-12-24 +3d
+ ^^
+ source.tjp3
+>  vacation oneDayOff 2011-12-24 +3d
+   ^^^^^^^^
+   source.tjp3 storage.type.vacation.tjp3
+>  vacation oneDayOff 2011-12-24 +3d
+           ^
+           source.tjp3
+>  vacation oneDayOff 2011-12-24 +3d
+            ^^^^^^^^^
+            source.tjp3 entity.name.type.vacation.tjp3
+>  vacation oneDayOff 2011-12-24 +3d
+                     ^
+                     source.tjp3
+>  vacation oneDayOff 2011-12-24 +3d
+                      ^^^^^^^^^^^^^^
+                      source.tjp3 constant.numeric.interval.tjp3
+
+>  vacation 2011-12-24 +3d
+ ^^
+ source.tjp3
+>  vacation 2011-12-24 +3d
+   ^^^^^^^^
+   source.tjp3 storage.type.vacation.tjp3
+>  vacation 2011-12-24 +3d
+           ^
+           source.tjp3
+>  vacation 2011-12-24 +3d
+            ^^^^^^^^^^^^^^
+            source.tjp3 constant.numeric.interval.tjp3
+
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+ ^^
+ source.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+   ^^^^^^^^
+   source.tjp3 storage.type.vacation.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+           ^
+           source.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+            ^^^^^^^^^
+            source.tjp3 entity.name.type.vacation.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                     ^
+                     source.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                      ^^^^^^^^^^^^^^
+                      source.tjp3 constant.numeric.interval.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                                    ^^
+                                    source.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                                      ^^^^^^^^^
+                                      source.tjp3 entity.name.type.vacation.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                                               ^
+                                               source.tjp3
+>  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                                                ^^^^^^^^^^^^^^
+                                                source.tjp3 constant.numeric.interval.tjp3
 
 >}
  ^

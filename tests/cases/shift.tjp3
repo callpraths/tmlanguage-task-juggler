@@ -16,6 +16,12 @@ shift "simple inclusions" {
     timezone 'America/Los Angeles'
 }
 
+shift "with vacation" {
+  vacation oneDayOff 2011-12-24 +3d
+  vacation 2011-12-24 +3d
+  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+}
+
 shift "recursive" {
   shift "flat"
   shift "deep" {

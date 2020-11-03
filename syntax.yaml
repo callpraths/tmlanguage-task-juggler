@@ -157,6 +157,7 @@ repository:
       - include: '#replace'
       - include: '#shift'
       - include: '#timezone'
+      - include: '#vacation'
 
   string:
     patterns:
@@ -168,3 +169,20 @@ repository:
       - match: '(timezone)\s*{{stringSingleLine}}'
         captures:
           '1': { name: storage.type.timezone.tjp3 }
+
+  vacation:
+    patterns:
+      - begin: '^\s*(vacation)\b'
+        end: '{{endOfListAttribute}}'
+        beginCaptures:
+          '1': { name: storage.type.vacation.tjp3 }
+        patterns:
+          - include: '#vacation-inclusions'
+
+  vacation-inclusions:
+    patterns:
+      - match: '{{ID}}'
+        name: entity.name.type.vacation.tjp3
+      - match: '{{interval}}'
+        name: constant.numeric.interval.tjp3
+      - include: '#literals'
