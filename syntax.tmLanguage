@@ -16,27 +16,37 @@
     <array>
       <dict>
         <key>include</key>
-        <string>#account</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#leaves</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#literals</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#shift</string>
-      </dict>
-      <dict>
-        <key>include</key>
-        <string>#vacation</string>
+        <string>#00-top-level</string>
       </dict>
     </array>
     <key>repository</key>
     <dict>
+      <key>00-top-level</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#account</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#leaves</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#literals</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#shift</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#vacation</string>
+          </dict>
+        </array>
+      </dict>
       <key>account</key>
       <dict>
         <key>patterns</key>

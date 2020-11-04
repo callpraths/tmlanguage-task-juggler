@@ -30,13 +30,17 @@ macros:
 
 
 patterns:
-- include: '#account'
-- include: '#leaves'
-- include: '#literals'
-- include: '#shift'
-- include: '#vacation'
+- include: '#00-top-level'
 
 repository:
+  00-top-level:
+    patterns:
+      - include: '#account'
+      - include: '#leaves'
+      - include: '#literals'
+      - include: '#shift'
+      - include: '#vacation'
+
   account:
     patterns:
     # Order matters: Multi-line pattern must preceded the single line version.
