@@ -30,6 +30,10 @@
         <key>include</key>
         <string>#shift</string>
       </dict>
+      <dict>
+        <key>include</key>
+        <string>#vacation</string>
+      </dict>
     </array>
     <key>repository</key>
     <dict>

@@ -34,6 +34,7 @@ patterns:
 - include: '#leaves'
 - include: '#literals'
 - include: '#shift'
+- include: '#vacation'
 
 repository:
   account:

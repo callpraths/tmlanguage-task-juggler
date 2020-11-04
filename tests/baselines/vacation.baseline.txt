@@ -1,0 +1,61 @@
+original file
+-----------------------------------
+vacation oneDayOff 2011-12-24 +3d
+vacation 2011-12-24 +3d
+vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+-----------------------------------
+
+
+>vacation oneDayOff 2011-12-24 +3d
+ ^^^^^^^^
+ source.tjp3 storage.type.vacation.tjp3
+>vacation oneDayOff 2011-12-24 +3d
+         ^
+         source.tjp3
+>vacation oneDayOff 2011-12-24 +3d
+          ^^^^^^^^^
+          source.tjp3 entity.name.type.vacation.tjp3
+>vacation oneDayOff 2011-12-24 +3d
+                   ^
+                   source.tjp3
+>vacation oneDayOff 2011-12-24 +3d
+                    ^^^^^^^^^^^^^^
+                    source.tjp3 constant.numeric.interval.tjp3
+
+>vacation 2011-12-24 +3d
+ ^^^^^^^^
+ source.tjp3 storage.type.vacation.tjp3
+>vacation 2011-12-24 +3d
+         ^
+         source.tjp3
+>vacation 2011-12-24 +3d
+          ^^^^^^^^^^^^^^
+          source.tjp3 constant.numeric.interval.tjp3
+
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+ ^^^^^^^^
+ source.tjp3 storage.type.vacation.tjp3
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+         ^
+         source.tjp3
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+          ^^^^^^^^^
+          source.tjp3 entity.name.type.vacation.tjp3
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                   ^
+                   source.tjp3
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                    ^^^^^^^^^^^^^^
+                    source.tjp3 constant.numeric.interval.tjp3
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                                  ^^
+                                  source.tjp3
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                                    ^^^^^^^^^
+                                    source.tjp3 entity.name.type.vacation.tjp3
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                                             ^
+                                             source.tjp3
+>vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
+                                              ^^^^^^^^^^^^^^
+                                              source.tjp3 constant.numeric.interval.tjp3
