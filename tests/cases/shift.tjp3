@@ -22,6 +22,13 @@ shift "with vacation" {
   vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
 }
 
+shift "with workinghours" {
+  workinghours mon - wed 1:00 - 2:00
+  workinghours sat, sun 12:12:34 - 12:11:23
+  workinghours mon - wed off
+  workinghours sat, sun off
+}
+
 shift "recursive" {
   shift "flat"
   shift "deep" {

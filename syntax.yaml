@@ -24,6 +24,9 @@ macros:
   intervalRange: (?:\-\s*{{timestamp}}|{{positiveDurationOffset}})
   explicitInteral: (?:{{timestamp}}\s*{{intervalRange}})
   interval: (?:{{explicitInteral}}|{{timestamp}})
+  weekday: (?:sun|mon|tue|wed|thu|fri|sat)
+  # Based off of vim syntax file
+  time: (?:\d\d?:\d\d(?::\d\d)?)
 
 
 patterns:
@@ -158,6 +161,7 @@ repository:
       - include: '#shift'
       - include: '#timezone'
       - include: '#vacation'
+      - include: '#workinghours'
 
   string:
     patterns:
@@ -185,4 +189,23 @@ repository:
         name: entity.name.type.vacation.tjp3
       - match: '{{interval}}'
         name: constant.numeric.interval.tjp3
+      - include: '#literals'
+
+  workinghours:
+    patterns:
+      - begin: '^\s*(workinghours)\b'
+        end: '{{endOfListAttribute}}'
+        beginCaptures:
+          '1': { name: storage.type.workinghours.tjp3 }
+        patterns:
+          - include: '#workinghours-inclusions'
+
+  workinghours-inclusions:
+    patterns:
+      - match: 'off'
+        name: constant.language.workinghours.tjp3
+      - match: '{{weekday}}'
+        name: constant.numeric.weekday.tjp3
+      - match: '{{time}}'
+        name: constant.numeric.time.tjp3
       - include: '#literals'

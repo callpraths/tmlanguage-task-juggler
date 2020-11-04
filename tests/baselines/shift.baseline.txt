@@ -24,6 +24,13 @@ shift "with vacation" {
   vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
 }
 
+shift "with workinghours" {
+  workinghours mon - wed 1:00 - 2:00
+  workinghours sat, sun 12:12:34 - 12:11:23
+  workinghours mon - wed off
+  workinghours sat, sun off
+}
+
 shift "recursive" {
   shift "flat"
   shift "deep" {
@@ -291,6 +298,139 @@ shift "recursive" {
 >  vacation oneDayOff 2011-12-24 +3d, twoDayOff 2011-11-24 +3d
                                                 ^^^^^^^^^^^^^^
                                                 source.tjp3 constant.numeric.interval.tjp3
+
+>}
+ ^
+ source.tjp3
+
+>
+ ^
+ source.tjp3
+
+>shift "with workinghours" {
+ ^^^^^
+ source.tjp3 storage.type.shift.tjp3
+>shift "with workinghours" {
+      ^
+      source.tjp3
+>shift "with workinghours" {
+       ^^^^^^^^^^^^^^^^^^^
+       source.tjp3 string.quoted.tjp3
+>shift "with workinghours" {
+                          ^^
+                          source.tjp3
+
+>  workinghours mon - wed 1:00 - 2:00
+ ^^
+ source.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+   ^^^^^^^^^^^^
+   source.tjp3 storage.type.workinghours.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+               ^
+               source.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+                ^^^
+                source.tjp3 constant.numeric.weekday.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+                   ^^^
+                   source.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+                      ^^^
+                      source.tjp3 constant.numeric.weekday.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+                         ^
+                         source.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+                          ^^^^
+                          source.tjp3 constant.numeric.time.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+                              ^^^
+                              source.tjp3
+>  workinghours mon - wed 1:00 - 2:00
+                                 ^^^^
+                                 source.tjp3 constant.numeric.time.tjp3
+
+>  workinghours sat, sun 12:12:34 - 12:11:23
+ ^^
+ source.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+   ^^^^^^^^^^^^
+   source.tjp3 storage.type.workinghours.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+               ^
+               source.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+                ^^^
+                source.tjp3 constant.numeric.weekday.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+                   ^^
+                   source.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+                     ^^^
+                     source.tjp3 constant.numeric.weekday.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+                        ^
+                        source.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+                         ^^^^^^^^
+                         source.tjp3 constant.numeric.time.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+                                 ^^^
+                                 source.tjp3
+>  workinghours sat, sun 12:12:34 - 12:11:23
+                                    ^^^^^^^^
+                                    source.tjp3 constant.numeric.time.tjp3
+
+>  workinghours mon - wed off
+ ^^
+ source.tjp3
+>  workinghours mon - wed off
+   ^^^^^^^^^^^^
+   source.tjp3 storage.type.workinghours.tjp3
+>  workinghours mon - wed off
+               ^
+               source.tjp3
+>  workinghours mon - wed off
+                ^^^
+                source.tjp3 constant.numeric.weekday.tjp3
+>  workinghours mon - wed off
+                   ^^^
+                   source.tjp3
+>  workinghours mon - wed off
+                      ^^^
+                      source.tjp3 constant.numeric.weekday.tjp3
+>  workinghours mon - wed off
+                         ^
+                         source.tjp3
+>  workinghours mon - wed off
+                          ^^^
+                          source.tjp3 constant.language.workinghours.tjp3
+
+>  workinghours sat, sun off
+ ^^
+ source.tjp3
+>  workinghours sat, sun off
+   ^^^^^^^^^^^^
+   source.tjp3 storage.type.workinghours.tjp3
+>  workinghours sat, sun off
+               ^
+               source.tjp3
+>  workinghours sat, sun off
+                ^^^
+                source.tjp3 constant.numeric.weekday.tjp3
+>  workinghours sat, sun off
+                   ^^
+                   source.tjp3
+>  workinghours sat, sun off
+                     ^^^
+                     source.tjp3 constant.numeric.weekday.tjp3
+>  workinghours sat, sun off
+                        ^
+                        source.tjp3
+>  workinghours sat, sun off
+                         ^^^
+                         source.tjp3 constant.language.workinghours.tjp3
 
 >}
  ^
