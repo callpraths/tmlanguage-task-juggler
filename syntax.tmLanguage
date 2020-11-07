@@ -31,6 +31,10 @@
           </dict>
           <dict>
             <key>include</key>
+            <string>#booking</string>
+          </dict>
+          <dict>
+            <key>include</key>
             <string>#leaves</string>
           </dict>
           <dict>
@@ -152,6 +156,55 @@
                 <string>constant.other.aggregate.tjp3</string>
               </dict>
             </dict>
+          </dict>
+        </array>
+      </dict>
+      <key>booking</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>begin</key>
+            <string>^\s*(booking)\b</string>
+            <key>end</key>
+            <string>(?:(?&lt;![,\s])\s*$)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>storage.type.booking.tjp3</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#booking-inclusions</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>booking-inclusions</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>match</key>
+            <string>(?:\b[a-zA-Z_][a-zA-Z0-9_]*\b)</string>
+            <key>name</key>
+            <string>entity.name.type.booking.tjp3</string>
+          </dict>
+          <dict>
+            <key>match</key>
+            <string>(?:(?:(?:(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)|(?:%\s*\{\s*(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)\s*(?:[+-]\s*(?:(?:\d+\.\d+)|(?:\d+))\s*(?:min|h|d|w|m|y))\s*\}))\s*(?:\-\s*(?:(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)|(?:%\s*\{\s*(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)\s*(?:[+-]\s*(?:(?:\d+\.\d+)|(?:\d+))\s*(?:min|h|d|w|m|y))\s*\}))|(?:\+\s*(?:(?:\d+\.\d+)|(?:\d+))\s*(?:min|h|d|w|m|y))))|(?:(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)|(?:%\s*\{\s*(?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)\s*(?:[+-]\s*(?:(?:\d+\.\d+)|(?:\d+))\s*(?:min|h|d|w|m|y))\s*\})))</string>
+            <key>name</key>
+            <string>constant.numeric.interval.tjp3</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#literals</string>
           </dict>
         </array>
       </dict>

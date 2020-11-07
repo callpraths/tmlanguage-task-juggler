@@ -36,6 +36,8 @@ repository:
   00-top-level:
     patterns:
       - include: '#account'
+      # TODO: Move inside `resource` once `resource` is defined.
+      - include: '#booking'
       - include: '#leaves'
       - include: '#literals'
       - include: '#shift'
@@ -72,6 +74,23 @@ repository:
         captures:
           '1': { name: storage.type.aggregate.tjp3 }
           '2': { name: constant.other.aggregate.tjp3 }
+
+  booking:
+    patterns:
+      - begin: '^\s*(booking)\b'
+        end: '{{endOfListAttribute}}'
+        beginCaptures:
+          '1': { name: storage.type.booking.tjp3 }
+        patterns:
+          - include: '#booking-inclusions'
+
+  booking-inclusions:
+    patterns:
+      - match: '{{ID}}'
+        name: entity.name.type.booking.tjp3
+      - match: '{{interval}}'
+        name: constant.numeric.interval.tjp3
+      - include: '#literals'
 
   credits:
     patterns:
