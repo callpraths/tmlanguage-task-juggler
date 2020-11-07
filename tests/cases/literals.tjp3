@@ -13,6 +13,7 @@ account "literals" {
   "this is a single line string"
   'this is also a single line string'
   flags "there should be no string here", 'alas'
+  2007-01-01-3:0:1
   2007-01-01-23:00:01-+1100
   flags 2007-01-01-23:00:01-+1100
   1.3

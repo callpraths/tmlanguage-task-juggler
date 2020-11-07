@@ -17,7 +17,7 @@ macros:
   numeric: (?:{{float}}|{{integer}})
   durationUnits: (?:min|h|d|w|m|y)
   durationOffset: (?:[+-]\s*{{numeric}}\s*{{durationUnits}})
-  timestampWithoutOffset: (?:\d\d\d\d-\d\d-\d\d(?:-\d\d:\d\d(?::\d\d)?)?(?:-[+-]\d\d\d\d)?)
+  timestampWithoutOffset: (?:\d\d\d\d-\d\d-\d\d(?:-\d\d?:\d\d?(?::\d\d?)?)?(?:-[+-]\d\d\d\d)?)
   timestampWithOffset: (?:%\s*\{\s*{{timestampWithoutOffset}}\s*{{durationOffset}}\s*\})
   timestamp: (?:{{timestampWithoutOffset}}|{{timestampWithOffset}})
   positiveDurationOffset: (?:\+\s*{{numeric}}\s*{{durationUnits}})
